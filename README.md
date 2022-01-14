@@ -50,7 +50,7 @@ We plan to use the NFTs to proof skills for members of the ArchiDAO. (archiDAO.i
   * [International Standard Classification of Occupations](https://www.ilo.org/public/english/bureau/stat/isco/)
   * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
 
-  
+
 
 # Frontend Interface Parameters
 - * Info-
@@ -64,3 +64,13 @@ We plan to use the NFTs to proof skills for members of the ArchiDAO. (archiDAO.i
 
 
 # ArchiDAO Project Smart Contract parameters
+
+#  technologies and tooling to uses
+- [polygon]
+- [Filecoin](https://docs.filecoin.io/about-filecoin/ipfs-and-filecoin/)
+- livepeer ?
+- [NFTport](NFTport.xyz)
+- TheGraph
+- [NFT standards](https://www.nftstandards.wtf/NFT+Standards+Wiki+-+READ.me)
+- [Harmony](https://open.harmony.one/)
+- [Moralis](https://moralis.io/)
