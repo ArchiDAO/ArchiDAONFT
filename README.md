@@ -1,5 +1,5 @@
 # NFTS
-NFTs for Skills for Architecture -This is a social token for proofingg skills on the ArchiDAO
+NFTs for Skills for Architecture -This is a social token for proofing skills on the ArchiDAO
  (archiDAO.io)
 
 
@@ -103,4 +103,6 @@ FULL
 - [Moralis](https://moralis.io/)
 
 # ToDo-
-- Friday:
+- Friday: Finish project descriptions
+- Saturday: morning build and test two strategies for saving metadata- on chain or on ipfs
+evening: interface
