@@ -13,6 +13,7 @@ NFTs for Skills for Architecture -This is a social token for proofingg skills on
 
 
 # NFT Smart Contract Parameters
+MVP
 * Info-
   - Name
   - contact email.
@@ -89,7 +90,7 @@ NFTs for Skills for Architecture -This is a social token for proofingg skills on
 
 
 
-#  technologies and tooling to uses
+#  technologies and tooling to use
 - [polygon](https://polygon.technology/)
 - [Filecoin](https://docs.filecoin.io/about-filecoin/ipfs-and-filecoin/)
 - livepeer ?
@@ -98,3 +99,6 @@ NFTs for Skills for Architecture -This is a social token for proofingg skills on
 - [NFT standards](https://www.nftstandards.wtf/NFT+Standards+Wiki+-+READ.me)
 - [Harmony](https://open.harmony.one/)
 - [Moralis](https://moralis.io/)
+
+# ToDo-
+- Friday:
