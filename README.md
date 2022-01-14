@@ -81,6 +81,13 @@ NFTs for Skills for Architecture -This is a social token for proofingg skills on
 
 
 # ArchiDAO Project Smart Contract parameters
+- stake
+- unstake
+- make rewards avaiable for Claim
+- terminate contracts
+
+
+
 
 #  technologies and tooling to uses
 - [polygon](https://polygon.technology/)
