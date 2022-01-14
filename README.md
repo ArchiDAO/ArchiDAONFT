@@ -19,12 +19,14 @@ MVP
   - contact email.
   - bio
 
+* Non-Transferable
+
+FULL
 * Time
   - manhours spent on projects
     - staked
     - available
 
-  * Non-Transferable
 
 
 
