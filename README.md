@@ -1,6 +1,6 @@
 # NFTS
-NFTs for Skills for Architecture
-We plan to use the NFTs to proof skills for members of the ArchiDAO. (archiDAO.io)
+NFTs for Skills for Architecture -This is a social token for proofingg skills on the ArchiDAO
+ (archiDAO.io)
 
 
 # Stakeholders
@@ -19,20 +19,24 @@ We plan to use the NFTs to proof skills for members of the ArchiDAO. (archiDAO.i
   - bio
 
 * Time
-  - manhours
+  - manhours spent on projects
     - staked
     - available
+
+  * Non-Transferable
+
 
 
 
 
 # Skills Classification
 
-
 - Current
   - Core
+    - [develop here those that are key for ArchiDAO]
 - Desirable
   - we need a mechanism that turns desirablle skills to Current skills
+  - User to add desirable skills - signal which workshops to prioritise next.
 
 
 - Track Record
@@ -61,12 +65,25 @@ We plan to use the NFTs to proof skills for members of the ArchiDAO. (archiDAO.i
 - Desirable skills
 - Intial Core skills commit
 
+- Token Management  
+  - Stake
+  - Unstake
+  - Claim rewards
+  - Burn ? - insert a social function to activate burning.-
+
+
+
+# Security Features
+- Burn2 - How do we burn NFTs from hacked accounts?
+- Mirror NFTs from Hacked Accounts then burn the originator. under certain conditions
+
+
 
 
 # ArchiDAO Project Smart Contract parameters
 
 #  technologies and tooling to uses
-- [polygon]
+- [polygon](https://polygon.technology/)
 - [Filecoin](https://docs.filecoin.io/about-filecoin/ipfs-and-filecoin/)
 - livepeer ?
 - [NFTport](NFTport.xyz)
