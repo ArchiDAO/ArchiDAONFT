@@ -33,10 +33,42 @@ FULL
 
 
 # Skills Classification
-
+MVP 
 - Current
   - Core
     - [develop here those that are key for ArchiDAO]
+    - Design
+        - Architecture
+        - Interior
+        - Urban
+        - Landscape
+    - Coding
+        - Solidity
+        - JavaScript
+        - Python
+        - C#
+    - Modeling
+        - Rhino
+        - Grasshopper
+        - Blender
+        - Revit
+        - ArchiCAD
+        - 2D drawing
+        - metaverse
+    - Communication
+        - PR
+        - HR
+        - Marketing
+        - Socials
+    - Legal
+        - Codes
+        - architectural license
+        - building law
+    - Academic
+        - writing
+        - funding
+        - teaching
+
 - Desirable
   - we need a mechanism that turns desirablle skills to Current skills
   - User to add desirable skills - signal which workshops to prioritise next.
