@@ -25,8 +25,8 @@ contract SNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable {
 
 //@dev controls the state of the NFTs- minted is the creation, valiadted is signed by another member.
 enum Status {
-  minted;
-  validated;
+  minted,
+  validated
 //  active  //@dev to be activated in the full version, will require staking
 //  inactive //@dev to be activated in the full version, will require staking
 }
