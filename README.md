@@ -13,7 +13,7 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
 
 
 # NFT Smart Contract Parameters
-MVP
+**MVP**
 * Info-
   - Name
   - contact email.
@@ -33,7 +33,7 @@ FULL
 
 
 # Skills Classification
-MVP 
+**MVP** 
 - Current
   - Core
     - [develop here those that are key for ArchiDAO]
@@ -73,7 +73,7 @@ MVP
   - we need a mechanism that turns desirablle skills to Current skills
   - User to add desirable skills - signal which workshops to prioritise next.
 
-
+**FULL**
 - Track Record
   - Events ID
   - Date for each Events
@@ -81,6 +81,7 @@ MVP
   - Project started but abandoned- project finished or halted-
   - Project started but still active.
 
+**FULL**
 - User defined skills field.
 
 - References for Skills Classification  
@@ -92,6 +93,7 @@ MVP
 
 
 # Frontend Interface Parameters
+**MVP**
 - * Info-
   - Name
   - contact email.
@@ -104,6 +106,7 @@ MVP
   - Stake
   - Unstake
   - Claim rewards
+  **FULL**
   - Burn ? - insert a social function to activate burning.-
 
 
