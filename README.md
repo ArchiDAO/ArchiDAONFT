@@ -18,6 +18,7 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
   - Name
   - contact email.
   - bio
+  - status: Valid / Pending / 
 
 * Non-Transferable
 
