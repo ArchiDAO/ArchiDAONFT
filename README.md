@@ -179,3 +179,7 @@ render the NFT in .svg - This allows to render directly onchain data-
 # References (Projects, constracts, examples)
 
 - [Avastars](https://github.com/NFT42/Avastars-Contracts)
+
+
+# VS issues
+https://medium.com/michaels-dapp-dev-tips/how-to-change-the-solidity-compiler-in-vs-code-4c2660a856da
