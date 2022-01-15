@@ -106,3 +106,21 @@ FULL
 - Friday: Finish project descriptions
 - Saturday: morning build and test two strategies for saving metadata- on chain or on ipfs
 evening: interface
+
+# Technical Implementation
+
+* OnChain-
+Polygon TestNet
+
+code all parameters of the NFT onChain
+coinvert into BASE64 - (Base64 is a group of binary-to-text encoding schemes that represent binary data)
+render the NFT in .svg - This allows to render directly onchain data-
+
+
+
+* OffChain-
+
+
+# References (Projects, constracts, examples)
+
+- [Avastars](https://github.com/NFT42/Avastars-Contracts)
