@@ -14,15 +14,29 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
 
 # NFT Smart Contract Parameters
 **MVP**
-* Info-
+* NFT-
   - Name
   - contact email.
   - bio
   - status: Valid / Pending / 
+**FULL**
+* Time
+  - manhours spent on projects
+    - staked
+    - available
 
 * Non-Transferable
+# Projects Smart COntract Parameters
+**MVP**
+* Project-
+  - Name
+  - Owner
+  - Brief
+  - Deadline
+  - Skills needed
+    - mh (manhours on each skill)
 
-FULL
+**FULL**
 * Time
   - manhours spent on projects
     - staked
