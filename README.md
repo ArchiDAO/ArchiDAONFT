@@ -12,20 +12,39 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
 - Reader
 
 
-# NFT Smart Contract Parameters
-MVP
-* Info-
+# NFT Skill Smart Contract Parameters
+**MVP**
+* NFT-
   - Name
   - contact email.
   - bio
-
+  - status: Valid / Pending
 * Non-Transferable
 
-FULL
+**FULL**
 * Time
   - manhours spent on projects
     - staked
     - available
+
+# Projects Smart Contract Parameters
+**MVP**
+* Project
+  - Name
+  - Owner
+  - Brief
+  - Deadline
+  - Skills needed
+    - Whitelisted categories / skills (by projects owner)
+    - mh (manhours on each skill)
+
+**FULL**
+* Time
+  - manhours spent on projects
+    - staked
+    - available
+* Skills needed
+    - Whitelisting features for the project owner
 
 
 
@@ -33,15 +52,47 @@ FULL
 
 
 # Skills Classification
-
+**MVP** 
 - Current
   - Core
     - [develop here those that are key for ArchiDAO]
+    - Design
+        - Architecture
+        - Interior
+        - Urban
+        - Landscape
+    - Coding
+        - Solidity
+        - JavaScript
+        - Python
+        - C#
+    - Modeling
+        - Rhino
+        - Grasshopper
+        - Blender
+        - Revit
+        - ArchiCAD
+        - 2D drawing
+        - metaverse
+    - Communication
+        - PR
+        - HR
+        - Marketing
+        - Socials
+    - Legal
+        - Codes
+        - architectural license
+        - building law
+    - Academic
+        - writing
+        - funding
+        - teaching
+
 - Desirable
   - we need a mechanism that turns desirablle skills to Current skills
   - User to add desirable skills - signal which workshops to prioritise next.
 
-
+**FULL**
 - Track Record
   - Events ID
   - Date for each Events
@@ -49,17 +100,13 @@ FULL
   - Project started but abandoned- project finished or halted-
   - Project started but still active.
 
+**FULL**
 - User defined skills field.
-
-- References for Skills Classification  
-  * [Competency Framework](https://www.skills-base.com/competency-framework)
-  * [Unesco Skills classification](http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf)
-  * [International Standard Classification of Occupations](https://www.ilo.org/public/english/bureau/stat/isco/)
-  * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
 
 
 
 # Frontend Interface Parameters
+**MVP**
 - * Info-
   - Name
   - contact email.
@@ -72,11 +119,12 @@ FULL
   - Stake
   - Unstake
   - Claim rewards
-  - Burn ? - insert a social function to activate burning.-
+  - Burn ? - insert a social function to activate burning.- (**FULL**)
 
 
 
 # Security Features
+**FULL**
 - Burn2 - How do we burn NFTs from hacked accounts?
 - Mirror NFTs from Hacked Accounts then burn the originator. under certain conditions
 
@@ -84,6 +132,7 @@ FULL
 
 
 # ArchiDAO Project Smart Contract parameters
+**MVP**
 - stake
 - unstake
 - make rewards avaiable for Claim
@@ -92,7 +141,7 @@ FULL
 
 
 
-#  technologies and tooling to use
+# technologies and tooling to use
 - [polygon](https://polygon.technology/)
 - [Filecoin](https://docs.filecoin.io/about-filecoin/ipfs-and-filecoin/)
 - livepeer ?
@@ -101,6 +150,12 @@ FULL
 - [NFT standards](https://www.nftstandards.wtf/NFT+Standards+Wiki+-+READ.me)
 - [Harmony](https://open.harmony.one/)
 - [Moralis](https://moralis.io/)
+
+# References for Skills Classification  
+  * [Competency Framework](https://www.skills-base.com/competency-framework)
+  * [Unesco Skills classification](http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf)
+  * [International Standard Classification of Occupations](https://www.ilo.org/public/english/bureau/stat/isco/)
+  * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
 
 # ToDo-
 - Friday: Finish project descriptions
