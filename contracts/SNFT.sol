@@ -22,6 +22,21 @@ contract SNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable {
 //  string email
 //  string bio
 
+
+//@dev controls the state of the NFTs- minted is the creation, valiadted is signed by another member.
+enum Status {
+  minted;
+  validated;
+//  active  //@dev to be activated in the full version, will require staking
+//  inactive //@dev to be activated in the full version, will require staking
+}
+
+Status public status;
+
+function setStatus(Status _status) public {
+  status = _status;
+}
+
 struct Skill {
   address owner;
   uint256 architecture;
@@ -30,7 +45,9 @@ struct Skill {
 
 }
 
-Skill skill;
+Skill [] public MetaArchitect;
+
+
 address userAddress;
 
 
@@ -46,7 +63,7 @@ address userAddress;
 
 
     function setSkill(address _userAddress, uint256 _architecture, uint256 _interior, uint256 _urban) public onlyOwner {
-      skill Storage Skill = Skill(userAddress,architecture,interior,urban);
+      skills.push(Skill(_userAddress, _architecture, _interior, _urban));
 
 
     }
