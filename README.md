@@ -84,12 +84,6 @@ FULL
 **FULL**
 - User defined skills field.
 
-- References for Skills Classification  
-  * [Competency Framework](https://www.skills-base.com/competency-framework)
-  * [Unesco Skills classification](http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf)
-  * [International Standard Classification of Occupations](https://www.ilo.org/public/english/bureau/stat/isco/)
-  * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
-
 
 
 # Frontend Interface Parameters
@@ -106,12 +100,12 @@ FULL
   - Stake
   - Unstake
   - Claim rewards
-  **FULL**
-  - Burn ? - insert a social function to activate burning.-
+  - Burn ? - insert a social function to activate burning.- (**FULL**)
 
 
 
 # Security Features
+**FULL**
 - Burn2 - How do we burn NFTs from hacked accounts?
 - Mirror NFTs from Hacked Accounts then burn the originator. under certain conditions
 
@@ -119,6 +113,7 @@ FULL
 
 
 # ArchiDAO Project Smart Contract parameters
+**MVP**
 - stake
 - unstake
 - make rewards avaiable for Claim
@@ -127,7 +122,7 @@ FULL
 
 
 
-#  technologies and tooling to use
+# technologies and tooling to use
 - [polygon](https://polygon.technology/)
 - [Filecoin](https://docs.filecoin.io/about-filecoin/ipfs-and-filecoin/)
 - livepeer ?
@@ -136,6 +131,12 @@ FULL
 - [NFT standards](https://www.nftstandards.wtf/NFT+Standards+Wiki+-+READ.me)
 - [Harmony](https://open.harmony.one/)
 - [Moralis](https://moralis.io/)
+
+# References for Skills Classification  
+  * [Competency Framework](https://www.skills-base.com/competency-framework)
+  * [Unesco Skills classification](http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf)
+  * [International Standard Classification of Occupations](https://www.ilo.org/public/english/bureau/stat/isco/)
+  * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
 
 # ToDo-
 - Friday: Finish project descriptions
