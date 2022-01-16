@@ -183,3 +183,6 @@ render the NFT in .svg - This allows to render directly onchain data-
 
 # VS issues
 https://medium.com/michaels-dapp-dev-tips/how-to-change-the-solidity-compiler-in-vs-code-4c2660a856da
+
+# React libraries and tutorials
+- https://www.telerik.com/blogs/quick-guide-dropdown-menus-react
