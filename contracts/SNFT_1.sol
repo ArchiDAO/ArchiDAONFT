@@ -17,9 +17,9 @@ contract SNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable {
     Counters.Counter private _tokenIdCounter;
 
 //
-//  string Name
-//  string email
-//  string bio
+  string public Name
+  string public email
+  string public bio
 
 
 //@dev controls the state of the NFTs- minted is the creation, valiadted is signed by another member.
