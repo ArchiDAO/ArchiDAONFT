@@ -17,9 +17,9 @@ contract SNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable {
     Counters.Counter private _tokenIdCounter;
 
 //
-  string public name
-  string public email
-  string public bio
+//  string Name
+//  string email
+//  string bio
 
 
 //@dev controls the state of the NFTs- minted is the creation, valiadted is signed by another member.
@@ -37,7 +37,8 @@ function setStatus(Status _status) public {
 }
 
 struct Skill {
-
+  string name;
+  string email;
   uint256 architecture;
   uint256 interior;
   uint256 urban;
@@ -49,12 +50,15 @@ Skill [] public skills;
 
 address userAddress;
 
-  constructor() ERC721("Skills NFT", "SNF") {}
 
-    function setSkill(uint256 _architecture, uint256 _interior, uint256 _urban) public{
-        skills.push(Skill(_architecture,_interior,_urban));
+    constructor() ERC721("Skills NFT", "SNF") {}
+
+    function setSkill(string _name, string _email, uint256 _architecture, uint256 _interior, uint256 _urban) public{
+        skills.push(Skill(_name, _email, _architecture,_interior,_urban));
+        _safeMint(requestToSender[requestId], newId);
 
     }
+
 
     function pause() public onlyOwner {
         _pause();
@@ -64,7 +68,6 @@ address userAddress;
         _unpause();
     }
 
-     function safeMint(address to, string memory _name, string memory _email, string memory _bio, uint256 _architecture, uint256 _interior, uint256 _urban  ) public onlyOwner {
 
 
 //    function getSkills()
