@@ -1,0 +1,7 @@
+Follow the white rabbit.
+
+Ok, this is very stupid, but it works.
+
+The whole changes to the scaffold are in a file called Home.jsx which I also put into the root. Once scaffold is running, just put it in this path:
+
+\NFTS\scaffold-eth\packages\react-app\src\views
