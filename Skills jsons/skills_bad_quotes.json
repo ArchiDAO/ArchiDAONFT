@@ -1,0 +1,54 @@
+{
+    "Skills": [
+      {
+        "Design": [
+            "Architecture: 2",
+            "Interior: 2",
+            "Urban: 2",
+            "Landscape: 2"
+        ]
+      },
+      {
+        "Coding": [
+          "Solidity: 1",
+          "JavaScript: 0",
+          "Python: 1",
+          "C#: 2"
+        ]
+      },
+      {
+        "Modeling": [
+          "Rhino: 2",
+          "Grasshopper: 1",
+          "Blender: 0",
+          "Revit: 3",
+          "ArchiCAD: 0",
+          "2D drawing: 1",
+          "metaverse: 2"
+        ]
+      },
+      {
+        "Communication": [
+          "PR: 1",
+          "HR: 2",
+          "Marketing: 3",
+          "Socials: 1"
+        ]
+      },
+      {
+        "Legal": [
+          "Codes: 2",
+          "architectural license: 3",
+          "building law: 2"
+        ]
+      },
+      {
+        "Academic": [
+          "writing: 1",
+          "funding: 1",
+          "teaching: 1"
+        ]
+      }
+    ]
+  }
+  

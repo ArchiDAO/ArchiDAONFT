@@ -1,0 +1,54 @@
+{
+    "Skills": [
+      {
+        "Design": [
+          "Architecture",
+          "Interior",
+          "Urban",
+          "Landscape"
+        ]
+      },
+      {
+        "Coding": [
+          "Solidity",
+          "JavaScript",
+          "Python",
+          "C#"
+        ]
+      },
+      {
+        "Modeling": [
+          "Rhino",
+          "Grasshopper",
+          "Blender",
+          "Revit",
+          "ArchiCAD",
+          "2D drawing",
+          "metaverse"
+        ]
+      },
+      {
+        "Communication": [
+          "PR",
+          "HR",
+          "Marketing",
+          "Socials"
+        ]
+      },
+      {
+        "Legal": [
+          "Codes",
+          "architectural license",
+          "building law"
+        ]
+      },
+      {
+        "Academic": [
+          "writing",
+          "funding",
+          "teaching"
+        ]
+      }
+    ]
+  }
+  

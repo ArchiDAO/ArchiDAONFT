@@ -1,0 +1,52 @@
+{
+    "Design": [
+      {
+        "Architecture": 2,
+        "Interior": 1,
+        "Urban": 0,
+        "Landscape": 3
+      }
+    ],
+    "Coding": [
+      {
+        "Solidity": 2,
+        "JavaScript": 1,
+        "Python": 0,
+        "C#": 3
+      }
+    ],
+    "Modeling": [
+      {
+        "Rhino": 2,
+        "Grasshopper": 1,
+        "Blender": 0,
+        "Revit": 3,
+        "ArchiCAD": 0,
+        "2D drawing": 1,
+        "metaverse": 2
+      }
+    ],
+    "Communication": [
+      {
+        "PR": 2,
+        "HR": 1,
+        "Marketing": 0,
+        "Socials": 3
+      }
+    ],
+    "Legal": [
+      {
+        "Codes": 2,
+        "architectural license": 1,
+        "building law": 0
+      }
+    ],
+    "Academic": [
+      {
+        "writing": 2,
+        "funding": 1,
+        "teaching": 0
+      }
+    ]
+  }
+  
