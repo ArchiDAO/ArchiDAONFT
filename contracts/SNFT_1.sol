@@ -17,7 +17,7 @@ contract SNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable {
     Counters.Counter private _tokenIdCounter;
 
 //
-  string public Name
+  string public name
   string public email
   string public bio
 
@@ -49,14 +49,12 @@ Skill [] public skills;
 
 address userAddress;
 
-
-    constructor() ERC721("Skills NFT", "SNF") {}
+  constructor() ERC721("Skills NFT", "SNF") {}
 
     function setSkill(uint256 _architecture, uint256 _interior, uint256 _urban) public{
         skills.push(Skill(_architecture,_interior,_urban));
 
     }
-
 
     function pause() public onlyOwner {
         _pause();
@@ -66,6 +64,7 @@ address userAddress;
         _unpause();
     }
 
+     function safeMint(address to, string memory _name, string memory _email, string memory _bio, uint256 _architecture, uint256 _interior, uint256 _urban  ) public onlyOwner {
 
 
 //    function getSkills()
