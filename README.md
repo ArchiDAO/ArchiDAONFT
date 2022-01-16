@@ -187,3 +187,17 @@ https://medium.com/michaels-dapp-dev-tips/how-to-change-the-solidity-compiler-in
 # React stuff
 - https://www.w3schools.com/react/react_forms.asp
 - https://www.telerik.com/blogs/quick-guide-dropdown-menus-react
+
+# Presentation
+##Introduction – our picture/website
+Hello, we were working on a project called NFT Architecture skills. We are architects and blockchain enthusiasts, trying to bring blockchain technology into architecture. We came up with an idea of NTFs representing our skills and abillities, which would help us  with running our decentralized architectural studio, ArchiDAO.
+
+##Description of final product
+NFT Architecture skills have a coulpe of usecases. 
+-keep track of collective skillset and competency and availabile free time of people in ArchiDAO for doing a projects.
+-proof of owners eligibility to work on a project
+-part of our governance, because it tracks experience
+-tool for applying for a project and splitting reward rof finished work
+##Example of NFT
+##Current state of project
+
