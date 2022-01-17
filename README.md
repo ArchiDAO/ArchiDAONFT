@@ -15,11 +15,13 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
 # NFT Skill Smart Contract Parameters
 **MVP**
 * NFT-
-  - Name
-  - contact email.
-  - bio
+  - Name -string
+  - contact email. string
+  - bio - string
   - status: Valid / Pending
 * Non-Transferable
+
+*  validation function
 
 **FULL**
 * Time
@@ -52,7 +54,7 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
 
 
 # Skills Classification
-**MVP** 
+**MVP** [break these down to structs]
 - Current
   - Core
     - [develop here those that are key for ArchiDAO]
@@ -173,31 +175,10 @@ render the NFT in .svg - This allows to render directly onchain data-
 
 
 
+
 * OffChain-
 
 
 # References (Projects, constracts, examples)
 
 - [Avastars](https://github.com/NFT42/Avastars-Contracts)
-
-
-# VS issues
-https://medium.com/michaels-dapp-dev-tips/how-to-change-the-solidity-compiler-in-vs-code-4c2660a856da
-
-# React stuff
-- https://www.w3schools.com/react/react_forms.asp
-- https://www.telerik.com/blogs/quick-guide-dropdown-menus-react
-
-# Presentation
-## Introduction – our picture/website
-Hello, we were working on a project called NFT Architecture skills. We are architects and blockchain enthusiasts, trying to bring blockchain technology into architecture. We came up with an idea of NTFs representing our skills and abillities, which would help us  with running our decentralized architectural studio, ArchiDAO.
-
-## Description of final product
-NFT Architecture skills have a coulpe of usecases. 
--keep track of collective skillset and competency and availabile free time of people in ArchiDAO for doing a projects.
--proof of owners eligibility to work on a project
--part of our governance, because it tracks experience
--tool for applying for a project and splitting reward rof finished work
-## Example of NFT
-## Current state of project
-
