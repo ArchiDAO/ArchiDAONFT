@@ -35,9 +35,13 @@ function setStatus(Status _status) public {
   status = _status;
 }
 
-struct Skill {
+struct ID {
   string name;
   string email;
+}
+
+
+struct Skill {
   uint256 architecture;
   uint256 interior;
   uint256 urban;
