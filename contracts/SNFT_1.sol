@@ -34,11 +34,12 @@ Status public status;
 function setStatus(Status _status) public {
   status = _status;
 }
-
-struct ID {
-  string name;
-  string email;
-}
+//we can not write ID to the contract as it breaks GDPR
+// ID should be optional on the metadata.
+//struct ID {
+//  string name;
+//  string email;
+//}
 
 
 struct Skill {
