@@ -1,0 +1,10 @@
+
+Frameworks for learning and organising architectural pedagogies are few and far in between. Those that have come to dominate the Architectural discourse are often connected with particular styles and ideologies, having very few connections with systematic learning and teaching of Architecture. Exceptions do exist (for example the Framework of the higher Education Academy) but do not focus on Architecture. 
+Within this gap, the computational design and the associated skills remain sometimes a sub-discipline that students learn themselves, despite pedagogy. In other areas of spatial design, in virtual worlds and the metaverse, spatial design skills are needed, but very rarely do they become an object of systematic pedagogy and pedagogical exploration. 
+
+Non-Fungible Tokens are singular digital entities that are stored and operate on smart contracts on decentralised ledger technologies / blockchain, with immutable, resilient, data-secure and utility properties. They have been successful within the art world, however they have utility beyond that narrow application.
+Within the paper we explore the creation of Non-Fungible Tokens that verify Computational design skills of specific designers, both for virtual worlds and physical architecture, as a vehicle to formalise learning outcomes and self-actualisation. The utility of the Non-Fungible token is that he archiect/ designer can use it to participate in Novel forms of organisations run on the blockchain called decentralised autonomous organisations, while schools and universities can map their learning outcomes against NFTs held by their graduates, providing an easy manner to verify skills and levels of accomplishments. As such the paper explores the pedagogical structure that can map the skills to NFTs including a classification of computational design pedagogies derived through meta analysis of papers on Cumincad. The paper concludes with a discussion of the potential expanded use of the computational design NFTs and their impact.
+
+
+
+
