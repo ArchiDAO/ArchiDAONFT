@@ -37,6 +37,7 @@ function setStatus(Status _status) public {
 
 
 struct Skill {
+  string alias;
   uint256 architecture;
   uint256 interior;
   uint256 urban;
@@ -51,8 +52,8 @@ address userAddress;
 
     constructor() ERC721("Skills NFT", "SNF") {}
 
-    function setSkill(string memory _name, string memory _email, uint256 _architecture, uint256 _interior, uint256 _urban) public onlyOwner{
-        skills.push(Skill(_name, _email, _architecture,_interior,_urban));
+    function setSkill(string memory _alias, uint256 _architecture, uint256 _interior, uint256 _urban) public onlyOwner{
+        skills.push(Skill(_name, _architecture,_interior,_urban));
         // _safeMint(requestToSender[requestId], newId);
 
     }
