@@ -46,8 +46,8 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
     - Whitelisting features for the project owner
 
 
-# Skills Classification
-**MVP** [break these down to structs]
+# Skills Classification for MetaDATA
+**MVP** [break these down to structs for onchain, or include in metadata for off-chain / metadata is probably better]
 - Current
   - Core
     - [develop here those that are key for ArchiDAO]
@@ -98,6 +98,9 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 **FULL**
 - User defined skills field.
 
+# Governance
+- possibilities:
+* 1 member = 1 vote
 
 
 # Frontend Interface Parameters
@@ -116,6 +119,10 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
   - Claim rewards
   - Burn ? - insert a social function to activate burning.- (**FULL**)
 
+# Process on Issueing the NFTs
+- Registry of membership
+- name, email, bio ? - how do we make this GDPR compliant?
+- ETH address
 
 
 # Security Features
