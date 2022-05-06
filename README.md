@@ -1,11 +1,10 @@
-# NFTS
-NFTs for Skills for Architecture -This is a social token for proofing skills on the ArchiDAO
- (archiDAO.io)
+# ArchiDAO NFTS
+NFTs for Skills for Architecture -This is a the membership token for proofing skills and experience on the ArchiDAO.
+ (archiDAO.io) It is also used as a governance token, proof of memebership in the organisation and a vehicle for the member to engage on-chain with the organisation.
 
 
 # Stakeholders
-
-- ArchiDAO Members
+- ArchiDAO Members (token holders - One member=one ArchiDAO NFT)
 - Validator
 - Project Owner
 - NFT user- Owner
@@ -15,19 +14,16 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
 # NFT Skill Smart Contract Parameters
 **MVP**
 * NFT-
-  - Name -string
-  - contact email. string
-  - bio - string
-  - status: Valid / Pending
+  Dynamic NFT through chainlink.
 * Non-Transferable
-
-*  validation function
+* Validation and activation function
 
 **FULL**
 * Time
   - manhours spent on projects
     - staked
     - available
+* record of experience
 
 # Projects Smart Contract Parameters
 **MVP**
@@ -40,6 +36,7 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
     - Whitelisted categories / skills (by projects owner)
     - mh (manhours on each skill)
 
+
 **FULL**
 * Time
   - manhours spent on projects
@@ -47,10 +44,6 @@ NFTs for Skills for Architecture -This is a social token for proofing skills on 
     - available
 * Skills needed
     - Whitelisting features for the project owner
-
-
-
-
 
 
 # Skills Classification
