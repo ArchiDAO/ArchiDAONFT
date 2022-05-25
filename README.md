@@ -4,7 +4,14 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 
 
 # ArchiDAO governance
- The basic premise of ArchiDAO is that we use a multi-governance system- the ArchiDAO NFT acts as your ID and is used to govern the DAO in importnat decisions - for fast decisions on a daily basis ArchiDAO uses Snapshot and its own ENS, to allow for say selecting a bacground for a workshop or a particular tutorial in a workshop. For Project governance, ArchiDAO uses its own ERC20 token which has both stakes and governance mechanisms, to apply into projects. As such only members who are staked on a project can govern that project. Hence a meber has three ways to influence and participate in decisions: govern via their ArchiDAO NFT, make choices via Snapshot, and stake and participate in a project's outcome via governance tokens. 
+ The basic premise of ArchiDAO is that we use a multi-governance system- the ArchiDAO NFT acts as your ID and is used to govern the DAO in importnat decisions - for fast decisions on a daily basis ArchiDAO uses Snapshot and its own ENS, to allow for say selecting a bacground for a workshop or a particular tutorial in a workshop. For Project governance, ArchiDAO uses its own ERC20 token which has both stakes and governance mechanisms, to apply into projects. As such only members who are staked on a project can govern that project. Hence a meber has three ways to influence and participate in decisions: govern via their ArchiDAO NFT, make choices via Snapshot, and stake and participate in a project's outcome via governance tokens.
+
+ This takes place as we believe that governance rights should not be really transferable. See [Soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) for a more in depth explanation.
+
+ Important Governance platforms:
+[Tally](https://www.tally.xyz/)  
+[SnapShot]()  
+
 
 
 # Stakeholders
@@ -18,10 +25,11 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 # NFT Skill Smart Contract Parameters
 **MVP**
 * NFT-
-  Dynamic NFT through chainlink.
+  * Dynamic NFT through Chainlink.
+  * Dynamic MetaData to be updated via chainlink oracles
   * Alias
   * Governance votes
-  * stakes ?
+  * No stakes for ERC721 - stakes should be impemented with governace ERC20 votes]
 
 
 * Non-Transferable
@@ -33,6 +41,15 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
     - staked
     - available
 * record of experience
+    - web3
+        - frontend
+        - backend
+        - smart Contracts
+    - AEC:
+      - Architectural design
+      - Construction & Project Management
+      - Engineering
+
 
 # Projects Smart Contract Parameters
 **MVP**
@@ -184,6 +201,7 @@ render the NFT in .svg - This allows to render directly onchain data-
 
 # Specifications
  [ERC721Vote](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes)
+ [Verifiable Credentials](https://www.w3.org/TR/vc-data-model/)
 
 
 * OffChain-
@@ -192,3 +210,4 @@ render the NFT in .svg - This allows to render directly onchain data-
 # References (Projects, constracts, examples)
 
 - [Avastars](https://github.com/NFT42/Avastars-Contracts)
+- [Limits of cryptoeconomics](https://vitalik.ca/general/2021/09/26/limits.html)
