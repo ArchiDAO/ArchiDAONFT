@@ -12,9 +12,17 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 [Tally](https://www.tally.xyz/)  
 [SnapShot]()  
 
+* 1 member = 1 vote
+* votes can be delegated as per ERC721Vote
+
+# Scope
+  - Identifying ArchiDAO membership
+  - allowing and enabling archiDAO governance
+  - Funding Public goods
+  - Protocol maintenance and upgrades (as per [Voting](https://vitalik.ca/general/2021/08/16/voting3.html) )
 
 
-# Stakeholders
+# Stakeholders (checl the verifiable credentials at W3)
 - ArchiDAO Members (token holders - One member=one ArchiDAO NFT)
 - Validator
 - Project Owner
@@ -27,9 +35,11 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 * NFT-
   * Dynamic NFT through Chainlink.
   * Dynamic MetaData to be updated via chainlink oracles
+  * how do we express this as a graph?
   * Alias
   * Governance votes
   * No stakes for ERC721 - stakes should be impemented with governace ERC20 votes]
+
 
 
 * Non-Transferable
@@ -50,8 +60,10 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
       - Construction & Project Management
       - Engineering
 
+  * Zero Knowledge Proofs incorporated in?
 
-# Projects Smart Contract Parameters
+
+# Projects Smart Contract Parameters [forked into another repository]
 **MVP**
 * Project
   - Name
@@ -70,6 +82,14 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
     - available
 * Skills needed
     - Whitelisting features for the project owner
+
+
+# ArchiDAO Project Smart Contract parameters [forked into another repository]
+    **MVP**
+    - stake
+    - unstake
+    - make rewards avaiable for Claim
+    - terminate contracts
 
 
 # Skills Classification for MetaDATA
@@ -124,10 +144,6 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 **FULL**
 - User defined skills field.
 
-# Governance
-- possibilities:
-* 1 member = 1 vote
-
 
 # Frontend Interface Parameters
 **MVP**
@@ -149,6 +165,7 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 - Registry of membership
 - name, email, bio ? - how do we make this GDPR compliant?
 - ETH address
+- Could we initially issue them through educational workshops? 
 
 
 # Security Features
@@ -159,12 +176,6 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 
 
 
-# ArchiDAO Project Smart Contract parameters
-**MVP**
-- stake
-- unstake
-- make rewards avaiable for Claim
-- terminate contracts
 
 
 
@@ -211,3 +222,4 @@ render the NFT in .svg - This allows to render directly onchain data-
 
 - [Avastars](https://github.com/NFT42/Avastars-Contracts)
 - [Limits of cryptoeconomics](https://vitalik.ca/general/2021/09/26/limits.html)
+- [building a community with NFTs and Verificable credentials](https://www.youtube.com/watch?v=WYtBTj14JQ4)
