@@ -40,13 +40,18 @@ contract AdaoNFT is ERC721, ERC721Enumerable, Pausable, Ownable, ERC721Burnable,
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
+      //  _setTokenURI(tokenId, tokenURI); // review and set this up to use IPFS for decentralised storage
     }
 
     //@dev controls the state of the NFTs- minted is the creation, validated is signed by another member.
     //@dev uncomment after the struct works
+    //@dev do NOT use the word null for the initial state- launch means the token was just mined.
+
+    uint256 adaoNFTid;
+
 
     enum Status {
-      null,
+      launch,
       validated,
       active,
       inactive
@@ -68,8 +73,10 @@ contract AdaoNFT is ERC721, ERC721Enumerable, Pausable, Ownable, ERC721Burnable,
       status = _status;
     }
 
-
-
+    struct update {
+      uint256 adaoNFTid;
+      Status currentStatus;
+    }
 
     //@dev transfer should actually be de-activated
     function _beforeTokenTransfer(address from, address to, uint256 tokenId)
