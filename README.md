@@ -44,6 +44,7 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 
 * Non-Transferable
 * Validation and activation function
+* can we validate via using the archiDAO Multi-sig public key ?
 
 **FULL**
 * Time
@@ -165,7 +166,7 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 - Registry of membership
 - name, email, bio ? - how do we make this GDPR compliant?
 - ETH address
-- Could we initially issue them through educational workshops? 
+- Could we initially issue them through educational workshops?
 
 
 # Security Features
@@ -223,3 +224,4 @@ render the NFT in .svg - This allows to render directly onchain data-
 - [Avastars](https://github.com/NFT42/Avastars-Contracts)
 - [Limits of cryptoeconomics](https://vitalik.ca/general/2021/09/26/limits.html)
 - [building a community with NFTs and Verificable credentials](https://www.youtube.com/watch?v=WYtBTj14JQ4)
+- [research erc721 enum struct NFT supply chain updates](https://github.com/whiteprompt/11187-research-erc721-nfts-solidity/blob/master/contracts/Package.sol)
