@@ -3,6 +3,10 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
  (archiDAO.io) It is also used as a governance token, proof of memebership in the organisation and a vehicle for the member to engage on-chain with the organisation.
 
 
+# ArchiDAO governance
+ The basic premise of ArchiDAO is that we use a multi-governance system- the ArchiDAO NFT acts as your ID and is used to govern the DAO in importnat decisions - for fast decisions on a daily basis ArchiDAO uses Snapshot and its own ENS, to allow for say selecting a bacground for a workshop or a particular tutorial in a workshop. For Project governance, ArchiDAO uses its own ERC20 token which has both stakes and governance mechanisms, to apply into projects. As such only members who are staked on a project can govern that project. Hence a meber has three ways to influence and participate in decisions: govern via their ArchiDAO NFT, make choices via Snapshot, and stake and participate in a project's outcome via governance tokens. 
+
+
 # Stakeholders
 - ArchiDAO Members (token holders - One member=one ArchiDAO NFT)
 - Validator
@@ -15,6 +19,11 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 **MVP**
 * NFT-
   Dynamic NFT through chainlink.
+  * Alias
+  * Governance votes
+  * stakes ?
+
+
 * Non-Transferable
 * Validation and activation function
 
@@ -47,7 +56,7 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
 
 
 # Skills Classification for MetaDATA
-**MVP** [break these down to structs for onchain, or include in metadata for off-chain / metadata is probably better]
+**MVP** [break these down to structs for onchain, and some in include in metadata for off-chain / metadata is probably better]
 - Current
   - Core
     - [develop here those that are key for ArchiDAO]
@@ -84,7 +93,7 @@ NFTs for Skills for Architecture -This is a the membership token for proofing sk
         - teaching
 
 - Desirable
-  - we need a mechanism that turns desirablle skills to Current skills
+  - We need a mechanism that turns desirablle skills to Current skills, probably through validation at a workshop, class, event.
   - User to add desirable skills - signal which workshops to prioritise next.
 
 **FULL**
@@ -173,7 +182,8 @@ code all parameters of the NFT onChain
 coinvert into BASE64 - (Base64 is a group of binary-to-text encoding schemes that represent binary data)
 render the NFT in .svg - This allows to render directly onchain data-
 
-
+# Specifications
+ [ERC721Vote](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes)
 
 
 * OffChain-
