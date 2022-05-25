@@ -18,6 +18,9 @@ contract AdaoNFT is ERC721, ERC721Enumerable, Pausable, Ownable, ERC721Burnable,
 
     constructor() ERC721("adaoNFT", "ADN") EIP712("adaoNFT", "1") {}
 
+    using SafeMath for uint256;
+
+
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://";
     }
@@ -42,12 +45,26 @@ contract AdaoNFT is ERC721, ERC721Enumerable, Pausable, Ownable, ERC721Burnable,
 
     //@dev controls the state of the NFTs- minted is the creation, validated is signed by another member.
     //@dev uncomment after the struct works
-    enum Status {
-      minted,
-      validated
+
+    enum Status {null, validated, active, inactive}
     //  active  //@dev to be activated in the full version, will require staking
     //  inactive //@dev to be activated in the full version, will require staking
+    // null is 0
+    // validated is 1
+    // active is 2
+    // inactive is 3
+
+    Status public status;
+
+    function getStatus() public view returns (Status) {
+      return status;
     }
+
+    function setStatus(Status _status) public {
+      status = _status;
+    }
+
+
 
 
     //@dev transfer should actually be de-activated
