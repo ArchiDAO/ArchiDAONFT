@@ -225,3 +225,4 @@ render the NFT in .svg - This allows to render directly onchain data-
 - [Limits of cryptoeconomics](https://vitalik.ca/general/2021/09/26/limits.html)
 - [building a community with NFTs and Verificable credentials](https://www.youtube.com/watch?v=WYtBTj14JQ4)
 - [research erc721 enum struct NFT supply chain updates](https://github.com/whiteprompt/11187-research-erc721-nfts-solidity/blob/master/contracts/Package.sol)
+- [extending the tokeURI](https://forum.openzeppelin.com/t/function-settokenuri-in-erc721-is-gone-with-pragma-0-8-0/5978/4)
