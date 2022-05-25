@@ -40,6 +40,16 @@ contract AdaoNFT is ERC721, ERC721Enumerable, Pausable, Ownable, ERC721Burnable,
         _safeMint(to, tokenId);
     }
 
+    //@dev controls the state of the NFTs- minted is the creation, validated is signed by another member.
+    //@dev uncomment after the struct works
+    enum Status {
+      minted,
+      validated
+    //  active  //@dev to be activated in the full version, will require staking
+    //  inactive //@dev to be activated in the full version, will require staking
+    }
+
+
     //@dev transfer should actually be de-activated
     function _beforeTokenTransfer(address from, address to, uint256 tokenId)
         internal
