@@ -1,7 +1,7 @@
 # ArchiDAO NFTS
 
 The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves a dual purpose: serving as a membership ID and governance vehicle, but also as the credentials for each member of the organisation. The NFT is structured so that it is compliant with the W3C Verifiable Credentials, as described here:
-(Verifiable Credentials)[https://www.w3.org/TR/vc-data-model/]
+[Verifiable Credentials](https://www.w3.org/TR/vc-data-model/)
 
 Beyond credentials each ArchiDAO NFT has also the governance utility in the organisation, i.e holders may participate in governance decisions to steer the archiDAO.
 
@@ -18,9 +18,16 @@ Beyond credentials each ArchiDAO NFT has also the governance utility in the orga
 * 1 member = 1 vote
 * votes can be delegated as per ERC721Vote
 
+# ArchiDAO credentials
+What type of credentials might we need?
+- competence and knowlledge
+- proof of attendance to a conference / workshops
+- experience in developing Projects
+
+
 # Scope
   - Identifying ArchiDAO membership
-  - allowing and enabling archiDAO governance
+  - Allowing and enabling archiDAO governance
   - Funding Public goods
   - Protocol maintenance and upgrades (as per [Voting](https://vitalik.ca/general/2021/08/16/voting3.html) )
 
@@ -178,6 +185,11 @@ Beyond credentials each ArchiDAO NFT has also the governance utility in the orga
 - Mirror NFTs from Hacked Accounts then burn the originator-  under certain conditions
 
 
+# Examples
+* [konsollidate](https://www.konsolidate.eu/stories/vc-solid-blockchain)
+* [verifiable credentials on wikipedia](https://en.wikipedia.org/wiki/Verifiable_credentials)
+* [Verifiable credentials on Web3 Consortium](https://www.w3.org/TR/vc-data-model/)
+* [W3C example implementations](https://w3c.github.io/vc-test-suite/implementations/)
 
 
 
@@ -192,7 +204,8 @@ Beyond credentials each ArchiDAO NFT has also the governance utility in the orga
 - TheGraph
 - [NFT standards](https://www.nftstandards.wtf/NFT+Standards+Wiki+-+READ.me)
 - [Harmony](https://open.harmony.one/)
-- [Moralis](https://moralis.io/)
+- [Moralis](https://moralis.io
+- [Veramo](https://veramo.io/)  
 
 # References for Skills Classification  
   * [Competency Framework](https://www.skills-base.com/competency-framework)
