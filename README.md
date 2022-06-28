@@ -1,6 +1,9 @@
 # ArchiDAO NFTS
-NFTs for Skills for Architecture -This is a the membership token for proofing skills and experience on the ArchiDAO.
- (archiDAO.io) It is also used as a governance token, proof of memebership in the organisation and a vehicle for the member to engage on-chain with the organisation.
+
+The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves a dual purpose: serving as a membership ID and governance vehicle, but also as the credentials for each member of the organisation. The NFT is structured so that it is compliant with the W3C Verifiable Credentials, as described here:
+(Verifiable Credentials)[https://www.w3.org/TR/vc-data-model/]
+
+Beyond credentials each ArchiDAO NFT has also the governance utility in the organisation, i.e holders may participate in governance decisions to steer the archiDAO.
 
 
 # ArchiDAO governance
