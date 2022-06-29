@@ -206,6 +206,7 @@ What type of credentials might we need?
 - [Harmony](https://open.harmony.one/)
 - [Moralis](https://moralis.io
 - [Veramo](https://veramo.io/)  
+- [Forward protocol](https://forwardprotocol.io/)
 
 # References for Skills Classification  
   * [Competency Framework](https://www.skills-base.com/competency-framework)
