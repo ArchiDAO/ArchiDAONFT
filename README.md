@@ -5,6 +5,8 @@ The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves 
 
 Beyond credentials each ArchiDAO NFT has also the governance utility in the organisation, i.e holders may participate in governance decisions to steer the archiDAO.
 
+This currnt version is a temporary one, until we structure the whole architecture and infrastructure, which might contain more thann one token and project smart contract.
+
 
 # ArchiDAO governance
  The basic premise of ArchiDAO is that we use a multi-governance system- the ArchiDAO NFT acts as your ID and is used to govern the DAO in important decisions - for fast decisions on a daily basis ArchiDAO uses Snapshot and its own ENS, to allow for say selecting a bacground for a workshop or a particular tutorial in a workshop. For Project governance, ArchiDAO uses its own ERC20 token which has both stakes and governance mechanisms, to apply into projects. As such only members who are staked on a project can govern that project. Hence a member has three ways to influence and participate in decisions: govern via their ArchiDAO NFT, make choices via Snapshot, and stake and participate in a project's outcome via governance tokens.
@@ -38,6 +40,7 @@ What type of credentials might we need?
 - Project Owner
 - NFT user- Owner
 - Reader
+-
 
 
 # NFT Skill Smart Contract Parameters
@@ -49,8 +52,6 @@ What type of credentials might we need?
   * Alias
   * Governance votes
   * No stakes for ERC721 - stakes should be impemented with governace ERC20 votes]
-
-
 
 * Non-Transferable
 * Validation and activation function
@@ -162,7 +163,6 @@ What type of credentials might we need?
   - Name
   - contact email.
   - bio
-
 - Desirable skills
 - Intial Core skills commit
 
@@ -192,11 +192,7 @@ What type of credentials might we need?
 * [W3C example implementations](https://w3c.github.io/vc-test-suite/implementations/)
 
 
-
-
-
-
-# technologies and tooling to use
+# Technologies and tooling to use
 - [polygon](https://polygon.technology/)
 - [Filecoin](https://docs.filecoin.io/about-filecoin/ipfs-and-filecoin/)
 - livepeer ?
