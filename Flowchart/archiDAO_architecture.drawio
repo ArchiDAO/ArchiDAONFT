@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-30T14:33:43.417Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="FwTATvo2k-zyHSiPsiQ-" version="17.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-30T14:36:03.515Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="_pmHYrh6Ynkc3OSn7edj" version="17.2.6" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
     <mxGraphModel dx="2126" dy="1871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -52,8 +52,11 @@
             <mxPoint x="370" y="60" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dNxyNK7c78bLwvsdeMH5-32" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="dNxyNK7c78bLwvsdeMH5-20" vertex="1">
+        <mxCell id="dNxyNK7c78bLwvsdeMH5-32" value="Contract ends" style="ellipse;whiteSpace=wrap;html=1;" parent="dNxyNK7c78bLwvsdeMH5-20" vertex="1">
           <mxGeometry x="730" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s07LqPvWrJtK-q0oX7jB-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="dNxyNK7c78bLwvsdeMH5-20" source="s07LqPvWrJtK-q0oX7jB-56" target="dNxyNK7c78bLwvsdeMH5-32">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-56" value="project milestone_reached" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-20">
           <mxGeometry x="560" y="30" width="120" height="60" as="geometry" />
@@ -96,6 +99,9 @@
         <mxCell id="s07LqPvWrJtK-q0oX7jB-65" value="stablecoins minted" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-21">
           <mxGeometry x="580" y="30" width="80" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="s07LqPvWrJtK-q0oX7jB-73" value="NFT&amp;nbsp;&lt;br&gt;Updated" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-21">
+          <mxGeometry x="720" y="35" width="70" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-45" value="snapshot" style="swimlane;html=1;startSize=20;horizontal=0;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-19">
           <mxGeometry x="20" y="520" width="1000" height="140" as="geometry" />
         </mxCell>
@@ -136,6 +142,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="dNxyNK7c78bLwvsdeMH5-19" source="s07LqPvWrJtK-q0oX7jB-63" target="s07LqPvWrJtK-q0oX7jB-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s07LqPvWrJtK-q0oX7jB-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="dNxyNK7c78bLwvsdeMH5-19" source="dNxyNK7c78bLwvsdeMH5-32" target="s07LqPvWrJtK-q0oX7jB-73">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-8" value="stake holders" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;strokeWidth=1;" vertex="1" parent="1">
