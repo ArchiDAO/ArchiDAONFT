@@ -5,7 +5,7 @@ The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves 
 
 Beyond credentials each ArchiDAO NFT has also the governance utility in the organisation, i.e holders may participate in governance decisions to steer the archiDAO.
 
-This currnt version is a temporary one, until we structure the whole architecture and infrastructure, which might contain more thann one token and project smart contract.
+This currnt version is a temporary one, until we structure the whole architecture and infrastructure, which might contain more thann one token and project smart contract. Then this repostory will migrate to a "verifiable credentials & governance NFT"
 
 
 # ArchiDAO governance
@@ -220,6 +220,7 @@ evening: interface
 * OnChain-
 Polygon TestNet
 
+- possibility of encoding all parameters of the NFT onchain with base 64 (not the recomended solution):
 code all parameters of the NFT onChain
 coinvert into BASE64 - (Base64 is a group of binary-to-text encoding schemes that represent binary data)
 render the NFT in .svg - This allows to render directly onchain data-
