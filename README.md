@@ -5,7 +5,7 @@ The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves 
 
 Beyond credentials each ArchiDAO NFT has also the governance utility in the organisation, i.e holders may participate in governance decisions to steer the archiDAO.
 
-This currnt version is a temporary one, until we structure the whole architecture and infrastructure, which might contain more thann one token and project smart contract. Then this repostory will migrate to a "verifiable credentials & governance NFT"
+This current version is a temporary one, until we structure the whole architecture and infrastructure, which might contain more thann one token and project smart contract. Then this repostory will migrate to a "verifiable credentials & governance NFT"  
 
 
 # ArchiDAO governance
