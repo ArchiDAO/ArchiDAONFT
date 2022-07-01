@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-30T17:05:24.230Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="hhuwEh2U603yqAZ6RIA5" version="17.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-01T11:16:57.651Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="Mn8eHlRuMnvUsMLmW9zC" version="17.2.6" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="2992" dy="2339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2126" dy="1871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -60,7 +60,7 @@
           <mxGeometry x="573.5" y="30" width="80" height="60" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-59" value="stablecoins assgined" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="s07LqPvWrJtK-q0oX7jB-44">
-          <mxGeometry x="720" y="50" width="80" height="60" as="geometry" />
+          <mxGeometry x="730" y="40" width="80" height="60" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-63" value="stakes_burned" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="s07LqPvWrJtK-q0oX7jB-44">
           <mxGeometry x="900" y="40" width="80" height="60" as="geometry" />
@@ -84,7 +84,7 @@
           <mxGeometry x="340" y="45" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-61" value="stablecoins assgined" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-21">
-          <mxGeometry x="710" y="35" width="80" height="60" as="geometry" />
+          <mxGeometry x="730" y="40" width="80" height="60" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-65" value="stablecoins earmed" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-21">
           <mxGeometry x="880" y="35" width="80" height="60" as="geometry" />
