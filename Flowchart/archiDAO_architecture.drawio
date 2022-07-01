@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-01T11:29:23.821Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="pSvMGEtzOeDMTccatuHD" version="17.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-01T12:08:02.990Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="a7LVY0c9C2r546wDGEUL" version="17.2.6" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
     <mxGraphModel dx="2126" dy="1871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -270,7 +270,7 @@
         <mxCell id="s07LqPvWrJtK-q0oX7jB-121" value="Validate" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="s07LqPvWrJtK-q0oX7jB-35">
           <mxGeometry x="950" y="30" width="80" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s07LqPvWrJtK-q0oX7jB-76" value="Contract NFT 1155" style="swimlane;startSize=20;horizontal=0;strokeWidth=1;" vertex="1" parent="s07LqPvWrJtK-q0oX7jB-33">
+        <mxCell id="s07LqPvWrJtK-q0oX7jB-76" value="Pro_tract_" style="swimlane;startSize=20;horizontal=0;strokeWidth=1;" vertex="1" parent="s07LqPvWrJtK-q0oX7jB-33">
           <mxGeometry x="20" y="360" width="1390" height="120" as="geometry" />
         </mxCell>
         <mxCell id="s07LqPvWrJtK-q0oX7jB-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="s07LqPvWrJtK-q0oX7jB-76" source="s07LqPvWrJtK-q0oX7jB-77" target="s07LqPvWrJtK-q0oX7jB-79">
