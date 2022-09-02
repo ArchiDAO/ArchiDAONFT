@@ -1,15 +1,17 @@
 # ArchiDAO NFTS
 
-The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves a dual purpose: serving as a membership ID and governance vehicle, but also as the credentials for each member of the organisation. The NFT is structured so that it is compliant with the W3C Verifiable Credentials, as described here:
+The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves a dual purpose: serving as a membership ID and governance vehicle, but also as the credentials for each member of the organisation. We will make every effort so that The NFT is structured so that it is compliant with the W3C Verifiable Credentials, as described here:
 [Verifiable Credentials](https://www.w3.org/TR/vc-data-model/)
+
+However the technican implementation of the ArchiDAO NFTs will be based around Soulbount Tokens (SBT) as referenced here: [Decentralised Society:Finding Web3's Soul](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763)
 
 Beyond credentials each ArchiDAO NFT also has the governance utility in the organisation, i.e holders may participate in governance decisions to steer the ArchiDAO.
 
-This current version is a temporary one, until we structure the whole architecture and infrastructure, which might contain more than one token and project smart contract. Then this repostory will migrate to a "verifiable credentials & governance NFT"  
+This current repository version is a temporary development one, until we structure the whole architecture and infrastructure, which might contain more than one token and project smart contract. Then this repostory will migrate to a "verifiable credentials & governance NFT"  
 
 
 # ArchiDAO governance
- The basic premise of ArchiDAO is that we use a multi-governance system- the ArchiDAO NFT acts as your ID and is used to govern the DAO in important decisions - for fast decisions on a daily basis ArchiDAO uses Snapshot and its own ENS, to allow for say selecting a background for a workshop or a particular tutorial in a workshop. For Project governance, ArchiDAO uses its own ERC20 token which has both staking and governance mechanisms, to apply into projects. As such only members who are staked on a project can govern that project. Hence a member has three ways to influence and participate in decisions: govern via their ArchiDAO NFT, make choices via Snapshot, and stake to participate in a project's outcome via governance tokens.
+ The basic premise of ArchiDAO is that we use a multi-governance system- the ArchiDAO NFT acts as your Identity and credentials and is used to govern the DAO in important decisions - for fast decisions on a daily basis ArchiDAO uses Snapshot and its own ENS, to allow for say selecting a background for a workshop or a particular tutorial in a workshop. For Project governance, ArchiDAO uses its own ERC20 token which has both staking and project governance mechanisms, to apply into projects. As such only members who are staked on a project can govern that project. Hence a member has three ways to influence and participate in decisions: govern via their ArchiDAO NFT, make choices via Snapshot, and stake to participate in a project's outcome via governance tokens.
 
  This takes place as we believe that governance rights should not be really transferable. See [Soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) for a more in depth explanation.
 
