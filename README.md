@@ -13,7 +13,7 @@ This current repository version is a temporary development one, until we structu
 # ArchiDAO governance
  The basic premise of ArchiDAO is that we use a multi-governance system- the ArchiDAO NFT acts as your Identity and credentials and is used to govern the DAO in important decisions - for fast decisions on a daily basis ArchiDAO uses Snapshot and its own ENS, to allow for say selecting a background for a workshop or a particular tutorial in a workshop. For Project governance, ArchiDAO uses its own ERC20 token which has both staking and project governance mechanisms, to apply into projects. As such only members who are staked on a project can govern that project. Hence a member has three ways to influence and participate in decisions: govern via their ArchiDAO NFT, make choices via Snapshot, and stake to participate in a project's outcome via governance tokens.
 
- This takes place as we believe that governance rights should not be really transferable. See [Soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) for a more in depth explanation.
+ This takes place as we believe that governance rights of the organisation should not be really transferable. See [Soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) for a more in depth explanation.
 
  Important Governance platforms:
 [Tally](https://www.tally.xyz/)  
@@ -26,7 +26,7 @@ This current repository version is a temporary development one, until we structu
 What type of credentials might we need?
 - competence and knowledge
 - proof of attendance to a conference / workshops
-- experience in developing Projects
+- experience in developing projects, i.e track record.
 
 
 # Scope
@@ -42,21 +42,22 @@ What type of credentials might we need?
 - Project Owner
 - NFT user- Owner
 - Reader
-
+- Other contracts : learning and proejct Contracts
 
 # NFT Skill Smart Contract Parameters
 **MVP**
 * NFT-
   * Dynamic NFT through Chainlink.
-  * Dynamic MetaData to be updated via chainlink oracles
+  * Dynamic MetaData to be updated via chainlink oracles ?
+  * Dynamic MetaData to be updated via another contract action?
   * how do we express this as a graph?
   * Alias
   * Governance votes
-  * No stakes for ERC721 - stakes should be implemented with governace ERC20 votes]
+  * No stakes for ERC721 - stakes should be implemented with governace ERC20 votes
 
 * Non-Transferable
 * Validation and activation function
-* can we validate via using the ArchiDAO Multi-sig public key ?
+* Validation via using the ArchiDAO Multi-sig public key - is there a way to do mass-validation of users / token minting?
 
 **FULL**
 * Time
@@ -72,8 +73,10 @@ What type of credentials might we need?
       - Architectural design
       - Construction & Project Management
       - Engineering
+*  dework.xyz tasks feed into the token?
 
   * Zero Knowledge Proofs incorporated in?
+
 
 
 # Projects Smart Contract Parameters [forked into another repository]
@@ -177,7 +180,7 @@ What type of credentials might we need?
   - Claim rewards
   - Burn ? - insert a social function to activate burning.- (**FULL**)
 
-# Process on Issueing the NFTs
+# Process on Issuing the NFTs
 - Registry of membership
 - name, email, bio ? - how do we make this GDPR compliant?
 - ETH address
@@ -187,6 +190,7 @@ What type of credentials might we need?
 # Security Features
 **FULL**
 - Burn - How do we burn NFTs from hacked accounts- needs control structure implemented in the contract.
+- could we have a metadata backup function ? 
 - Mirror NFTs from Hacked Accounts then burn the originator-  under certain conditions
 
 
