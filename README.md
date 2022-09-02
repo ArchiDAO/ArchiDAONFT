@@ -5,6 +5,10 @@ The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves 
 
 However the technican implementation of the ArchiDAO NFTs will be based around Soulbount Tokens (SBT) as referenced here: [Decentralised Society:Finding Web3's Soul](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763)
 
+The reference implementation seems to be EIP-4973. The discussion at Ethereum-Magicians is here: [EIP4972 -Account-bound tokens](https://ethereum-magicians.org/t/eip-4973-account-bound-tokens/8825)
+
+The code for EIP-4973 is located here: [EIP4973 reference implementation](https://github.com/rugpullindex/ERC4973/)
+
 Beyond credentials each ArchiDAO NFT also has the governance utility in the organisation, i.e holders may participate in governance decisions to steer the ArchiDAO.
 
 This current repository version is a temporary development one, until we structure the whole architecture and infrastructure, which might contain more than one token and project smart contract. Then this repostory will migrate to a "verifiable credentials & governance NFT"  
@@ -190,7 +194,7 @@ What type of credentials might we need?
 # Security Features
 **FULL**
 - Burn - How do we burn NFTs from hacked accounts- needs control structure implemented in the contract.
-- could we have a metadata backup function ? 
+- could we have a metadata backup function ?
 - Mirror NFTs from Hacked Accounts then burn the originator-  under certain conditions
 
 
