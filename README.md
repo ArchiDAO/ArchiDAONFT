@@ -48,9 +48,9 @@ What type of credentials might we need?
 - Reader
 - Other contracts : learning and proejct Contracts
 
-# NFT Skill Smart Contract Parameters
+# ArchiDAO SBT Skill Smart Contract Parameters
 **MVP**
-* NFT-
+* NFT-general questions
   * Dynamic NFT through Chainlink.
   * Dynamic MetaData to be updated via chainlink oracles ?
   * Dynamic MetaData to be updated via another contract action?
@@ -60,10 +60,32 @@ What type of credentials might we need?
   * No stakes for ERC721 - stakes should be implemented with governace ERC20 votes
 
 * Non-Transferable
+
+**STorage and Parameters**
+
+- URI (universal Resource Locator- need to use IPFS)
+- Struct
+  * name / Alias
+  * number issue
+
+
+**Functions**
+
+- minting and validating
+- Governance
+- Profile ?
+-
+
+**Events**
+
+- token minted
+- token validated
+-
+
 * Validation and activation function
 * Validation via using the ArchiDAO Multi-sig public key - is there a way to do mass-validation of users / token minting?
 
-**FULL**
+**FULL Metadata**
 * Time
   - hours spent on projects
     - staked
@@ -253,3 +275,4 @@ render the NFT in .svg - This allows to render directly onchain data-
 - [building a community with NFTs and Verificable credentials](https://www.youtube.com/watch?v=WYtBTj14JQ4)
 - [research erc721 enum struct NFT supply chain updates](https://github.com/whiteprompt/11187-research-erc721-nfts-solidity/blob/master/contracts/Package.sol)
 - [extending the tokeURI](https://forum.openzeppelin.com/t/function-settokenuri-in-erc721-is-gone-with-pragma-0-8-0/5978/4)
+- [The reputation problem in DAOs and why SBTs are important](https://otterspace.mirror.xyz/Cec_bTSsLgcohuaV5dkOJTbaYuFB6tF8jhxzN_30k1A)
