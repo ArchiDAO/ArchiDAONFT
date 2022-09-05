@@ -3,7 +3,7 @@
 The ArchiDAO NFT is the membership and governance token for ArchiDAO. It serves a dual purpose: serving as a membership ID and governance vehicle, but also as the credentials for each member of the organisation. We will make every effort so that The NFT is structured so that it is compliant with the W3C Verifiable Credentials, as described here:
 [Verifiable Credentials](https://www.w3.org/TR/vc-data-model/)
 
-However the technican implementation of the ArchiDAO NFTs will be based around Soulbount Tokens (SBT) as referenced here: [Decentralised Society:Finding Web3's Soul](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763)
+However the Technical implementation of the ArchiDAO NFTs will be based around Soulbount Tokens (SBT) as referenced here: [Decentralised Society:Finding Web3's Soul](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763). Fundamentally we need to avoid "market fundamendalism" for governance and participation in the DAO, as both are social goods that are not captured alone by economic indicators, such as the fungible Tokens used for rewards and staking internally in the DAO.
 
 The reference implementation seems to be EIP-4973. The discussion at Ethereum-Magicians is here: [EIP4972 -Account-bound tokens](https://ethereum-magicians.org/t/eip-4973-account-bound-tokens/8825)
 
