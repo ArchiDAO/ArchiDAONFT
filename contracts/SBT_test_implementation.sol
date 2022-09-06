@@ -15,9 +15,10 @@ contract SBT {
 
     struct Soul {
         string identity;
+        bool  core; //this signifies if the NFT belongs to a core member.
         // add issuer specific fields below
         string url;
-        uint256 score;
+        uint256 score; // @dev can we use this for weight voting?
         uint256 timestamp;
     }
 
@@ -28,7 +29,7 @@ contract SBT {
     string public name;
     string public ticker;
     address public operator;
-    bytes32 private zeroHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+    bytes32 private zeroHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470; //@dev double check where the source for this zeroHashash 
 
     event Mint(address _soul);
     event Burn(address _soul);

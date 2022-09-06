@@ -32,7 +32,7 @@ What type of credentials might we need?
   * Dynamic MetaData to be updated via another contract action?
   * how do we express this as a graph?
   * Alias
-  * Governance votes
+  * Governance votes -is this a struct? - do we assign weights? Core members?
   * No stakes for ERC721 - stakes should be implemented with governace ERC20 votes
 
 * Non-Transferable
