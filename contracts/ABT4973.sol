@@ -25,7 +25,6 @@ bytes32 constant AGREEMENT_HASH =
     "Agreement(address active,address passive,string tokenURI)"
 );
 
-
 /// @notice Reference implementation of EIP-4973 tokens.
 /// @author Tim Daubenschütz, Rahul Rumalla (https://github.com/rugpullindex/ERC4973/blob/master/src/ERC4973.sol)
 abstract contract ERC4973 is EIP712, ERC165, IERC721Metadata, IERC4973 {
