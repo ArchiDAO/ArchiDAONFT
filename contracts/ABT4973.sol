@@ -1,6 +1,13 @@
 // SPDX-License-Identifier: CC0-1.0
 pragma solidity ^0.8.8;
 
+
+/// @notice Reference implementation of EIP-4973 tokens.
+/// @author Tim Daubenschütz, Rahul Rumalla (https://github.com/rugpullindex/ERC4973/blob/master/src/ERC4973.sol)
+//@dev double check the abstract contract in the next line - should it not be just contract ?
+
+abstract contract ERC4973 is EIP712, ERC165, IERC721Metadata, IERC4973 {
+
 import {SignatureChecker} from "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
 import {EIP712} from "@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol";
 import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
@@ -8,7 +15,7 @@ import {ERC165} from "./ERC165.sol";
 import {IERC721Metadata} from "./interfaces/IERC721Metadata.sol";
 import {IERC4973} from "./interfaces/IERC4973.sol";
 
-// @dev use the following for remix tests:
+// @dev use the following for remix development tests:
 //
 //import {SignatureChecker} from "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
 //import {EIP712} from "@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol";
@@ -17,7 +24,7 @@ import {IERC4973} from "./interfaces/IERC4973.sol";
 //import {IERC721Metadata} from "./interfaces/IERC721Metadata.sol";
 //import {IERC4973} from "./interfaces/IERC4973.sol";
 //
-//
+
 
 
 bytes32 constant AGREEMENT_HASH =
@@ -25,9 +32,6 @@ bytes32 constant AGREEMENT_HASH =
     "Agreement(address active,address passive,string tokenURI)"
 );
 
-/// @notice Reference implementation of EIP-4973 tokens.
-/// @author Tim Daubenschütz, Rahul Rumalla (https://github.com/rugpullindex/ERC4973/blob/master/src/ERC4973.sol)
-abstract contract ERC4973 is EIP712, ERC165, IERC721Metadata, IERC4973 {
   using BitMaps for BitMaps.BitMap;
   BitMaps.BitMap private _usedHashes;
 
