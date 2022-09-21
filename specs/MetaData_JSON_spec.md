@@ -15,6 +15,10 @@
       - Engineering
 *  dework.xyz tasks feed into the token?
 
+* Location -
+* enumerate skillset
+* make sure the data is readable from external website/ dashboards. 
+
   * Zero Knowledge Proofs incorporated in?
 
 
