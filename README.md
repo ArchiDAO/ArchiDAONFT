@@ -52,9 +52,11 @@ This current repository version is a temporary development one, until we structu
   * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
 
 # ToDo-
-- Friday: Finish project descriptions
-- Saturday: morning build and test two strategies for saving metadata- on chain or on ipfs
+- Saturday: Finish project descriptions
+- Sunday: morning build and test two strategies for saving metadata- on chain or on ipfs
 evening: interface
+
+
 
 # Technical Implementation
 
@@ -69,12 +71,10 @@ render the NFT in .svg - This allows to render directly onchain data-
 # Specifications
  [ERC721Vote](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes)
  [Verifiable Credentials](https://www.w3.org/TR/vc-data-model/)
-
-
 * OffChain-
 
 
-# References (Projects, constracts, examples)
+# References (Projects, constracts, examples, readings)
 
 - [Avastars](https://github.com/NFT42/Avastars-Contracts)
 - [Limits of cryptoeconomics](https://vitalik.ca/general/2021/09/26/limits.html)
@@ -82,3 +82,4 @@ render the NFT in .svg - This allows to render directly onchain data-
 - [research erc721 enum struct NFT supply chain updates](https://github.com/whiteprompt/11187-research-erc721-nfts-solidity/blob/master/contracts/Package.sol)
 - [extending the tokeURI](https://forum.openzeppelin.com/t/function-settokenuri-in-erc721-is-gone-with-pragma-0-8-0/5978/4)
 - [The reputation problem in DAOs and why SBTs are important](https://otterspace.mirror.xyz/Cec_bTSsLgcohuaV5dkOJTbaYuFB6tF8jhxzN_30k1A)
+- [SBTs vs Verifiable credentials](https://mirror.xyz/melzhou.eth/uC6PrFtQOvrF4xN5JWzWKQ8WEGYvHoQFKwsYpKEnrfc)
