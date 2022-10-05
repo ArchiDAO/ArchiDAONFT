@@ -6,7 +6,9 @@ The ArchiDAO NFT is the governance token for ArchiDAO. It serves a dual purpose:
 
 However the Technical implementation of the ArchiDAO NFTs is based around Soulbount Tokens (SBT) as referenced here: [Decentralised Society:Finding Web3's Soul](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763). Fundamentally we need to avoid "market fundamendalism" for governance and participation in the DAO, as both are social goods that are not captured alone by economic indicators, such as the fungible Tokens used for rewards and staking internally in the DAO.
 
-The reference implementation seems to be EIP-4973. The discussion at Ethereum-Magicians is here: [EIP4972 -Account-bound tokens](https://ethereum-magicians.org/t/eip-4973-account-bound-tokens/8825)
+there are two EIPs for SBTs - EIP4973 and [EIP-5114](https://eips.ethereum.org/EIPS/eip-5114)
+
+For reference implementation of EIP-4973, the discussion at Ethereum-Magicians is here: [EIP4972 -Account-bound tokens](https://ethereum-magicians.org/t/eip-4973-account-bound-tokens/8825)
 
 The code for EIP-4973 is located here: [EIP4973 reference implementation](https://github.com/rugpullindex/ERC4973/)
 
@@ -83,3 +85,4 @@ render the NFT in .svg - This allows to render directly onchain data-
 - [extending the tokeURI](https://forum.openzeppelin.com/t/function-settokenuri-in-erc721-is-gone-with-pragma-0-8-0/5978/4)
 - [The reputation problem in DAOs and why SBTs are important](https://otterspace.mirror.xyz/Cec_bTSsLgcohuaV5dkOJTbaYuFB6tF8jhxzN_30k1A)
 - [SBTs vs Verifiable credentials](https://mirror.xyz/melzhou.eth/uC6PrFtQOvrF4xN5JWzWKQ8WEGYvHoQFKwsYpKEnrfc)
+- [Awesome Soulbound Tokens](https://github.com/rugpullindex/awesome-soulbound-tokens)
