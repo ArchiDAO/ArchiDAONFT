@@ -7,7 +7,7 @@ The ArchiDAO NFT is the governance token for ArchiDAO. It serves a dual purpose:
 The NFT holds the governance part while DiD and VC hold the credentials and experience part of the member identity.
 
 
-One potential implementation would be  of the ArchiDAO NFTs around Soulbount Tokens (SBT) as referenced here: [Decentralised Society:Finding Web3's Soul](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763). Fundamentally we need to avoid "market fundamendalism" for governance and participation in the DAO, as both are social goods that are not captured alone by economic indicators, such as the fungible Tokens used for rewards and staking internally in the DAO.
+One potential implementation would be  of the ArchiDAO NFTs around Soulbound Tokens (SBT) as referenced here: [Decentralised Society:Finding Web3's Soul](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763). Fundamentally we need to avoid "market fundamendalism" for governance and participation in the DAO, as both are social goods that are not captured alone by economic indicators, such as the fungible Tokens used for rewards and staking internally in the DAO.
 
 
 # Soulbound Tokens
