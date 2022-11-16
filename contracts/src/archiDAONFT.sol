@@ -10,12 +10,19 @@ import "@openzeppelin/contracts@4.8.0/utils/cryptography/draft-EIP712.sol";
 import "@openzeppelin/contracts@4.8.0/token/ERC721/extensions/draft-ERC721Votes.sol";
 import "@openzeppelin/contracts@4.8.0/utils/Counters.sol";
 
+
+//@dev we should explore upgradeable contracts
+//@dev burn function is embedded- we can tuse that for certificable credentials upgrade OR a bridge between L1 and L2
 contract Arch is ERC721, ERC721URIStorage, Pausable, AccessControl, ERC721Burnable, EIP712, ERC721Votes {
     using Counters for Counters.Counter;
 
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     Counters.Counter private _tokenIdCounter;
+
+    //@user multisig should be the admin
+    //@user three core memebrs as pausers
+    //@user multisig as minter - or core members as minters
 
     constructor() ERC721("Arch", "ARC") EIP712("Arch", "1") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
