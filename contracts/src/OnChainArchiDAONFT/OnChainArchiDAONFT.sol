@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 // import "@openzeppelin/contracts/utils/Base64.sol";
 import {Base64} from "./Base64.sol";
 
-contract OnChainArchiDAONFT is ERC721URIStorage  {
+contract NFTBasic is ERC721URIStorage  {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -15,6 +15,9 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
     mapping(uint256 => uint256) public tokenIdToMemberId;
     mapping(uint256 => string) public tokenIdToBio;
     // mapping(uint256 => uint256) public tokenIdToSkills2;
+    mapping(uint256 => uint256) public tokenIdToSkill1;
+
+    //add whitelist mapping
 
     constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH"){
     }
@@ -49,7 +52,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
         tokenIdToBio[tokenId] = bio;
     }
 
-
+    //function updateBio()
 
     function getTokenURI(uint256 tokenId) public view returns (string memory){
         bytes memory dataURI = abi.encodePacked(
@@ -58,7 +61,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
                 '"memberId": "', tokenId.toString(), '",', 
                 '"description": "NFT for member skills attained",',
                 '"image": "', generateSkills(tokenId), '",',
-                '"skill_1": "0",', 
+                '"skill_1": "', tokenIdToSkill1[tokenId].toString(), '",', 
                 '"skill_2": "0",', 
                 '"skill_3": "0",', 
                 '"skill_4": "0",', 
@@ -74,6 +77,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
     }
 
     function mint(string memory bio) public {
+        //require whitelist to mint
         _tokenIds.increment();
         uint256 currentMemberId = _tokenIds.current();
         writeBio(currentMemberId, bio);
@@ -89,5 +93,15 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
         uint256 currentLevel = tokenIdToMemberId[tokenId];
         tokenIdToMemberId[tokenId] = currentLevel + 1;
         _setTokenURI(tokenId, getTokenURI(tokenId));
+    }
+
+    function updateSkill1(uint256 tokenId) public returns (string memory) {
+        require(_exists(tokenId), "Please use an existing token");
+        require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
+
+        uint256 currentSkillLevel = tokenIdToSkill1[tokenId];
+        tokenIdToSkill1[tokenId] = currentSkillLevel + 1;
+        _setTokenURI(tokenId, getTokenURI(tokenId));
+        return tokenIdToSkill1[tokenId].toString();
     }
 }
