@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 // import "@openzeppelin/contracts/utils/Base64.sol";
 import {Base64} from "./Base64.sol";
 
-contract NFTBasic is ERC721URIStorage  {
+contract OnChainArchiDAONFT is ERC721URIStorage  {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -16,6 +16,7 @@ contract NFTBasic is ERC721URIStorage  {
     mapping(uint256 => string) public tokenIdToBio;
     // mapping(uint256 => uint256) public tokenIdToSkills2;
     mapping(uint256 => uint256) public tokenIdToSkill1;
+    mapping(uint256 => uint256) public tokenIdToSkill2;
 
     //add whitelist mapping
 
@@ -62,10 +63,10 @@ contract NFTBasic is ERC721URIStorage  {
                 '"description": "NFT for member skills attained",',
                 '"image": "', generateSkills(tokenId), '",',
                 '"skill_1": "', tokenIdToSkill1[tokenId].toString(), '",', 
-                '"skill_2": "0",', 
-                '"skill_3": "0",', 
-                '"skill_4": "0",', 
-                '"skill_5": "0",', 
+                '"skill_2": "', tokenIdToSkill2[tokenId].toString(), '",', 
+                // '"skill_3": "0",', //stack too deep
+                // '"skill_4": "0",', 
+                // '"skill_5": "0",', 
             '}'
         );
         return string(
@@ -103,5 +104,15 @@ contract NFTBasic is ERC721URIStorage  {
         tokenIdToSkill1[tokenId] = currentSkillLevel + 1;
         _setTokenURI(tokenId, getTokenURI(tokenId));
         return tokenIdToSkill1[tokenId].toString();
+    }
+
+    function updateSkill2(uint256 tokenId) public returns (string memory) {
+        require(_exists(tokenId), "Please use an existing token");
+        require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
+
+        uint256 currentSkillLevel = tokenIdToSkill2[tokenId];
+        tokenIdToSkill2[tokenId] = currentSkillLevel + 1;
+        _setTokenURI(tokenId, getTokenURI(tokenId));
+        return tokenIdToSkill2[tokenId].toString();
     }
 }
