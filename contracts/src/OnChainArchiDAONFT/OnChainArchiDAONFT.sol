@@ -9,17 +9,11 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 // import "@openzeppelin/contracts/utils/Base64.sol";
 import {Base64} from "./Base64.sol";
 
-contract NFTBasic is ERC721URIStorage  {
+contract OnChainArchiDAONFT is ERC721URIStorage  {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     Counters.Counter private _memberIds;
-
-    // mapping(uint256 => uint256) public tokenIdToMemberId;
-    // mapping(uint256 => string) public tokenIdToBio;
-    // // mapping(uint256 => uint256) public tokenIdToSkills2;
-    // mapping(uint256 => uint256) public tokenIdToSkill1;
-    // mapping(uint256 => uint256) public tokenIdToSkill2;
 
     //Member skills struct
     struct MemberSkills {
