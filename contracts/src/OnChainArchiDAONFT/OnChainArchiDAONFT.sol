@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.16;
+
+import "hardhat/console.sol";
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -7,112 +9,169 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 // import "@openzeppelin/contracts/utils/Base64.sol";
 import {Base64} from "./Base64.sol";
 
-contract OnChainArchiDAONFT is ERC721URIStorage  {
+contract NFTBasic is ERC721URIStorage  {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
+    Counters.Counter private _memberIds;
 
-    mapping(uint256 => uint256) public tokenIdToMemberId;
-    mapping(uint256 => string) public tokenIdToBio;
-    // mapping(uint256 => uint256) public tokenIdToSkills2;
-    mapping(uint256 => uint256) public tokenIdToSkill1;
-    mapping(uint256 => uint256) public tokenIdToSkill2;
+    // mapping(uint256 => uint256) public tokenIdToMemberId;
+    // mapping(uint256 => string) public tokenIdToBio;
+    // // mapping(uint256 => uint256) public tokenIdToSkills2;
+    // mapping(uint256 => uint256) public tokenIdToSkill1;
+    // mapping(uint256 => uint256) public tokenIdToSkill2;
+
+    //Member skills struct
+    struct MemberSkills {
+        uint256 memberId;
+        uint256 projectsCompleted;
+        uint256 skill_1;
+        uint256 skill_2;
+        uint256 skill_3;
+        uint256 skill_4;
+        uint256 skill_5;
+    }
+    //mapping to save member structs
+    mapping (address => MemberSkills) public memberAddresses;
+    // MemberSkills[] public memberSkills;
+
+    //mapping for addresses to NFTS
+    mapping (address => uint256) public addressToNFTNumber;
+
+    //whitelist member
+    mapping (address => bool) public whitelistedMember;
 
     //add whitelist mapping
 
     constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH"){
     }
 
-// insert function to generate string BIO data which can change
-// '<text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">', "Skill_2: ",getLevels(tokenId),'</text>', //stack too deep
-// ,tokenIdToMemberId[tokenId]
-    function generateSkills(uint256 tokenId) public view returns(string memory) {
+    //whitelist member address and create memberSkills struct
+    function whitelistMember(address _memberAddress) public {
+        //require owner/access control to submit address (possibly do batch whitelisting)
+        
+        _memberIds.increment();
+        uint256 currentMemberId = _memberIds.current();
 
-        bytes memory svg = abi.encodePacked(
-            '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350">',
-            '<style>.base { fill: white; font-family: serif; font-size: 14px; }</style>',
-            '<rect width="100%" height="100%" fill="black" />',
-            '<text x="50%" y="40%" class="base" dominant-baseline="middle" text-anchor="middle">','ArchiDAO Skills of Member NFT ', tokenIdToMemberId[tokenId].toString(),'</text>',
-            '<text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">', 'Member BIO: ', tokenIdToBio[tokenId],'</text>', 
-            '</svg>'
-        );
-        return string(
-            abi.encodePacked(
-                "data:image/svg+xml;base64,",
-                Base64.encode(svg)
-            )    
-        );
+        memberAddresses[_memberAddress] = MemberSkills(currentMemberId, 0, 0, 0, 0, 0, 0);
+
+        whitelistedMember[_memberAddress] = true;
+
     }
 
-    // function getLevels(uint256 tokenId) public view returns (string memory) {
-    //     uint256 levels = tokenIdToMemberId[tokenId];
-    //     return levels.toString();
-    // }
+    function removeWhitelistedMember(address _memberAddress) public {
 
-    function writeBio(uint256 tokenId, string memory bio) internal {
-        tokenIdToBio[tokenId] = bio;
     }
 
-    //function updateBio()
+    //Minting NFT function
+    function mint() public {
+        //require whitelistedMember to mint
+        // require(whitelistedMember[msg.sender], "Not whitelisted");
+
+        //require can only mint 1 NFT (NFT's connected to addresses)
+        // require(addressToNFTNumber[msg.sender] == 0, "Already minted NFT");
+
+        _tokenIds.increment();
+        uint256 currentTokenId = _tokenIds.current();
+
+        addressToNFTNumber[msg.sender] = currentTokenId;
+
+        _safeMint(msg.sender, currentTokenId);
+
+        _setTokenURI(currentTokenId, getTokenURI(currentTokenId));
+    }
 
     function getTokenURI(uint256 tokenId) public view returns (string memory){
+
+        address addressOfNFTOwner = ownerOf(tokenId);
+        MemberSkills storage memberSkillsStruct = memberAddresses[addressOfNFTOwner];
+        // string memory memberProjectsCompleted = memberSkillsStruct.projectsCompleted.toString();
+        string memory memberSkillLevel_1 = memberSkillsStruct.skill_1.toString();
+        string memory memberSkillLevel_2 = memberSkillsStruct.skill_2.toString();
+        string memory memberSkillLevel_3 = memberSkillsStruct.skill_3.toString();
+        string memory memberSkillLevel_4 = memberSkillsStruct.skill_4.toString();
+        string memory memberSkillLevel_5 = memberSkillsStruct.skill_5.toString();
+
+
         bytes memory dataURI = abi.encodePacked(
-            '{',
-                '"name": "ArchiDAO NFT"',  ',',
-                '"memberId": "', tokenId.toString(), '",', 
-                '"description": "NFT for member skills attained",',
-                '"image": "', generateSkills(tokenId), '",',
-                '"skill_1": "', tokenIdToSkill1[tokenId].toString(), '",', 
-                '"skill_2": "', tokenIdToSkill2[tokenId].toString(), '",', 
-                // '"skill_3": "0",', //stack too deep
-                // '"skill_4": "0",', 
-                // '"skill_5": "0",', 
+                getTokenURIInitialMetadata(tokenId),
+                '"skill_1": "', memberSkillLevel_1, '",', 
+                '"skill_2": "', memberSkillLevel_2, '",', 
+                '"skill_3": "', memberSkillLevel_3, '",', 
+                '"skill_4": "', memberSkillLevel_4, '",', 
+                '"skill_5": "', memberSkillLevel_5, '",', 
             '}'
         );
+
         return string(
             abi.encodePacked(
                 "data:application/json;base64,",
                 Base64.encode(dataURI)
             )
         );
+    
     }
 
-    function mint(string memory bio) public {
-        //require whitelist to mint
-        _tokenIds.increment();
-        uint256 currentMemberId = _tokenIds.current();
-        writeBio(currentMemberId, bio);
+    function getTokenURIInitialMetadata(uint256 tokenId) internal view returns (string memory) {
+        
+        string memory memberTokenId = tokenId.toString();
 
-        _safeMint(msg.sender, currentMemberId);
-        tokenIdToMemberId[currentMemberId] = 0;
-        _setTokenURI(currentMemberId, getTokenURI(currentMemberId));
+        address addressOfNFTOwner = ownerOf(tokenId);
+        MemberSkills storage memberSkillsStruct = memberAddresses[addressOfNFTOwner];
+        string memory memberProjectsCompleted = memberSkillsStruct.projectsCompleted.toString();
+
+        bytes memory dataURI = abi.encodePacked(
+                '{',
+                '"name": "ArchiDAO NFT"',  ',',
+                '"memberId": "', memberTokenId, '",', 
+                '"description": "NFT for member skills attained",',
+                '"image": "', 'https://ipfs.io/ipfs/QmRHgykzBUuQR4FuWUH2mtpabWagLSuxndjD3fK2c7ZJ89/', memberTokenId, '.png', '",' // Base64 or IPFS URI string, each token can get a different image if in IPFS folder from 1 - nth. Maybe just start with 50 members, then increase token count.//generateSkills(tokenId)
+                '"Projects Completed": "', memberProjectsCompleted, '",'
+        );
+
+        return string(
+            dataURI
+        );
+        
     }
 
-    function train(uint256 tokenId) public {
-        require(_exists(tokenId), "Please use an existing token");
-        require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
-        uint256 currentLevel = tokenIdToMemberId[tokenId];
-        tokenIdToMemberId[tokenId] = currentLevel + 1;
+// CONTINUE FROM HERE /////
+    //Update memberSkillsStruc with increased skill level
+    function updateMemberSkills(uint tokenId) public {
+        // require tokenexsists or membership exists
+
+        address memberSkillsToUpdate = ownerOf(tokenId);
+
+        MemberSkills storage memberSkillsStruct = memberAddresses[memberSkillsToUpdate];
+
+        memberSkillsStruct.projectsCompleted = memberSkillsStruct.projectsCompleted + 1;
+
         _setTokenURI(tokenId, getTokenURI(tokenId));
     }
 
-    function updateSkill1(uint256 tokenId) public returns (string memory) {
-        require(_exists(tokenId), "Please use an existing token");
-        require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
 
-        uint256 currentSkillLevel = tokenIdToSkill1[tokenId];
-        tokenIdToSkill1[tokenId] = currentSkillLevel + 1;
-        _setTokenURI(tokenId, getTokenURI(tokenId));
-        return tokenIdToSkill1[tokenId].toString();
-    }
-
-    function updateSkill2(uint256 tokenId) public returns (string memory) {
-        require(_exists(tokenId), "Please use an existing token");
-        require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
-
-        uint256 currentSkillLevel = tokenIdToSkill2[tokenId];
-        tokenIdToSkill2[tokenId] = currentSkillLevel + 1;
-        _setTokenURI(tokenId, getTokenURI(tokenId));
-        return tokenIdToSkill2[tokenId].toString();
-    }
 }
+
+    // function getLevels(uint256 tokenId) public view returns (string memory) {
+    //     uint256 levels = tokenIdToMemberId[tokenId];
+    //     return levels.toString();
+    // }
+
+    // function train(uint256 tokenId) public {
+    //     require(_exists(tokenId), "Please use an existing token");
+    //     require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
+    //     uint256 currentLevel = tokenIdToMemberId[tokenId];
+    //     tokenIdToMemberId[tokenId] = currentLevel + 1;
+    //     _setTokenURI(tokenId, getTokenURI(tokenId));
+    // }
+
+    // function updateSkill1(uint256 tokenId) public returns (string memory) {
+    //     require(_exists(tokenId), "Please use an existing token");
+    //     require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
+
+    //     uint256 currentSkillLevel = tokenIdToSkill1[tokenId];
+    //     tokenIdToSkill1[tokenId] = currentSkillLevel + 1;
+    //     _setTokenURI(tokenId, getTokenURI(tokenId));
+    //     return tokenIdToSkill1[tokenId].toString();
+    // }
+
