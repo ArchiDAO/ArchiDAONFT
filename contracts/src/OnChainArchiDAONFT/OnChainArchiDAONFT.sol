@@ -1,19 +1,29 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.16;
 
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
+// import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Votes.sol";
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-// import "@openzeppelin/contracts/utils/Base64.sol";
-import {Base64} from "./Base64.sol";
+import "@openzeppelin/contracts/utils/Base64.sol";
+// import {Base64} from "./Base64.sol";
 
-contract OnChainArchiDAONFT is ERC721URIStorage  {
+// To add AccessControl and Pausable 
+
+
+
+contract OnChainArchiDAONFT is ERC721, ERC721URIStorage, EIP712, ERC721Votes {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     Counters.Counter private _memberIds;
+
+    // PNG image URI on IPFS, can update
+    string public imageIPFSFolderURI = 'https://ipfs.io/ipfs/QmRHgykzBUuQR4FuWUH2mtpabWagLSuxndjD3fK2c7ZJ89/';
 
     //Member skills struct
     struct MemberSkills {
@@ -26,7 +36,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
         uint256 skill_5;
     }
     //mapping to save member structs
-    mapping (address => MemberSkills) public memberAddresses;
+    mapping (address => MemberSkills) public memberSkillsStructMap;
     // MemberSkills[] public memberSkills;
 
     //mapping for addresses to NFTS
@@ -37,7 +47,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
 
     //add whitelist mapping
 
-    constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH"){
+    constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH") EIP712("ARCH", "1") {
     }
 
     //whitelist member address and create memberSkills struct
@@ -47,7 +57,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
         _memberIds.increment();
         uint256 currentMemberId = _memberIds.current();
 
-        memberAddresses[_memberAddress] = MemberSkills(currentMemberId, 0, 0, 0, 0, 0, 0);
+        memberSkillsStructMap[_memberAddress] = MemberSkills(currentMemberId, 0, 0, 0, 0, 0, 0);
 
         whitelistedMember[_memberAddress] = true;
 
@@ -78,7 +88,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
     function getTokenURI(uint256 tokenId) public view returns (string memory){
 
         address addressOfNFTOwner = ownerOf(tokenId);
-        MemberSkills storage memberSkillsStruct = memberAddresses[addressOfNFTOwner];
+        MemberSkills storage memberSkillsStruct = memberSkillsStructMap[addressOfNFTOwner];
         // string memory memberProjectsCompleted = memberSkillsStruct.projectsCompleted.toString();
         string memory memberSkillLevel_1 = memberSkillsStruct.skill_1.toString();
         string memory memberSkillLevel_2 = memberSkillsStruct.skill_2.toString();
@@ -111,7 +121,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
         string memory memberTokenId = tokenId.toString();
 
         address addressOfNFTOwner = ownerOf(tokenId);
-        MemberSkills storage memberSkillsStruct = memberAddresses[addressOfNFTOwner];
+        MemberSkills storage memberSkillsStruct = memberSkillsStructMap[addressOfNFTOwner];
         string memory memberProjectsCompleted = memberSkillsStruct.projectsCompleted.toString();
 
         bytes memory dataURI = abi.encodePacked(
@@ -119,7 +129,7 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
                 '"name": "ArchiDAO NFT"',  ',',
                 '"memberId": "', memberTokenId, '",', 
                 '"description": "NFT for member skills attained",',
-                '"image": "', 'https://ipfs.io/ipfs/QmRHgykzBUuQR4FuWUH2mtpabWagLSuxndjD3fK2c7ZJ89/', memberTokenId, '.png', '",' // Base64 or IPFS URI string, each token can get a different image if in IPFS folder from 1 - nth. Maybe just start with 50 members, then increase token count.//generateSkills(tokenId)
+                '"image": "', imageIPFSFolderURI, memberTokenId, '.png', '",' // Base64 or IPFS URI string, each token can get a different image if in IPFS folder from 1 - nth. Maybe just start with 50 members, then increase token count.//generateSkills(tokenId)
                 '"Projects Completed": "', memberProjectsCompleted, '",'
         );
 
@@ -129,21 +139,53 @@ contract OnChainArchiDAONFT is ERC721URIStorage  {
         
     }
 
+    function updateIPFSImageFolderURI (string memory newIPFSURI) public {
+        imageIPFSFolderURI = newIPFSURI;
+    }
+
 // CONTINUE FROM HERE /////
     //Update memberSkillsStruc with increased skill level
-    function updateMemberSkills(uint tokenId) public {
+    function updateMemberSkills(uint tokenId, bool skill_1, bool skill_2) public {
         // require tokenexsists or membership exists
 
         address memberSkillsToUpdate = ownerOf(tokenId);
 
-        MemberSkills storage memberSkillsStruct = memberAddresses[memberSkillsToUpdate];
+        MemberSkills storage memberSkillsStruct = memberSkillsStructMap[memberSkillsToUpdate];
 
-        memberSkillsStruct.projectsCompleted = memberSkillsStruct.projectsCompleted + 1;
+        memberSkillsStruct.projectsCompleted++; //= memberSkillsStruct.projectsCompleted + 1;
+
+        if(skill_1 == true) {
+            memberSkillsStruct.skill_1++;
+        }
+
+        if(skill_2 == true) {
+            memberSkillsStruct.skill_2++;
+        }
 
         _setTokenURI(tokenId, getTokenURI(tokenId));
     }
 
+    // The following functions are overrides required by Solidity.
+    
+    function _afterTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
+        internal
+        override(ERC721, ERC721Votes)
+    {
+        super._afterTokenTransfer(from, to, tokenId, batchSize);
+    }
 
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
+    }
+
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        override(ERC721, ERC721URIStorage)
+        returns (string memory)
+    {
+        return super.tokenURI(tokenId);
+    }
 }
 
     // function getLevels(uint256 tokenId) public view returns (string memory) {
