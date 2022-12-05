@@ -12,15 +12,15 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
 // import {Base64} from "./Base64.sol";
 
-// To add AccessControl and Pausable 
+import "@openzeppelin/contracts/access/AccessControl.sol";
 
-
-
-contract OnChainArchiDAONFT is ERC721, ERC721URIStorage, EIP712, ERC721Votes {
+contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, ERC721Votes {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     Counters.Counter private _memberIds;
+
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
     // PNG image URI on IPFS, can update
     string public imageIPFSFolderURI = 'https://ipfs.io/ipfs/QmRHgykzBUuQR4FuWUH2mtpabWagLSuxndjD3fK2c7ZJ89/';
@@ -48,6 +48,8 @@ contract OnChainArchiDAONFT is ERC721, ERC721URIStorage, EIP712, ERC721Votes {
     //add whitelist mapping
 
     constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH") EIP712("ARCH", "1") {
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(MINTER_ROLE, msg.sender);
     }
 
     //whitelist member address and create memberSkills struct
@@ -68,7 +70,7 @@ contract OnChainArchiDAONFT is ERC721, ERC721URIStorage, EIP712, ERC721Votes {
     }
 
     //Minting NFT function
-    function mint() public {
+    function mint() public /*onlyRole(MINTER_ROLE)*/ {
         //require whitelistedMember to mint
         // require(whitelistedMember[msg.sender], "Not whitelisted");
 
@@ -164,9 +166,8 @@ contract OnChainArchiDAONFT is ERC721, ERC721URIStorage, EIP712, ERC721Votes {
 
         _setTokenURI(tokenId, getTokenURI(tokenId));
     }
-
     // The following functions are overrides required by Solidity.
-    
+
     function _afterTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
         internal
         override(ERC721, ERC721Votes)
@@ -185,6 +186,15 @@ contract OnChainArchiDAONFT is ERC721, ERC721URIStorage, EIP712, ERC721Votes {
         returns (string memory)
     {
         return super.tokenURI(tokenId);
+    }
+
+    function supportsInterface(bytes4 interfaceId)
+        public
+        view
+        override(ERC721, AccessControl)
+        returns (bool)
+    {
+        return super.supportsInterface(interfaceId);
     }
 }
 
