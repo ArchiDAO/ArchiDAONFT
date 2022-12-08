@@ -59,9 +59,8 @@ This current repository version is a temporary development one, until we structu
   * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
 
 # ToDo-
-- Saturday: Finish project descriptions
-- Sunday: morning build and test two strategies for saving metadata- on chain or on ipfs
-evening: interface
+- whitelist external
+- multisig
 
 
 
