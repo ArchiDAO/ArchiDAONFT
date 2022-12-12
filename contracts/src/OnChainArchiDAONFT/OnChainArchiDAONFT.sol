@@ -31,7 +31,7 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage {
 //need to have NFT to access to ERC20 tokens to be able to stake, be part of the project
     struct MemberSkills {
         uint256 memberId;
-        uint256 projectsCompleted; //mapping(uint => string) projectDetails
+        uint256 projectsCompleted; //mapping(uint => struct) projectDetails
         uint256 skill_1; //engineering : value 0 - 100 max.
         uint256 skill_2; //design
         uint256 skill_3; //registration

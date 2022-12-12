@@ -59,7 +59,7 @@ This current repository version is a temporary development one, until we structu
   * [European Skills/Competencies Framework](https://ec.europa.eu/esco/portal/documents)
 
 # ToDo-
-- whitelist external
+- batch whitelist implemented
 - multisig
 
 
