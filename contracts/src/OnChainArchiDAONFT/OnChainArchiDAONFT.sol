@@ -3,8 +3,7 @@ pragma solidity ^0.8.16;
 
 // import "hardhat/console.sol";
 // import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Votes.sol";
+//check snapshot for voting
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -14,7 +13,11 @@ import "@openzeppelin/contracts/utils/Base64.sol";
 
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
-contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, ERC721Votes {
+// 8/12/22
+//Polygon deployment (DID's), to early
+
+
+contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -25,15 +28,20 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, 
     // PNG image URI on IPFS, can update
     string public imageIPFSFolderURI = 'https://ipfs.io/ipfs/QmRHgykzBUuQR4FuWUH2mtpabWagLSuxndjD3fK2c7ZJ89/';
 
-    //Member skills struct
+//need to have NFT to access to ERC20 tokens to be able to stake, be part of the project
     struct MemberSkills {
         uint256 memberId;
-        uint256 projectsCompleted;
-        uint256 skill_1;
-        uint256 skill_2;
-        uint256 skill_3;
-        uint256 skill_4;
-        uint256 skill_5;
+        uint256 projectsCompleted; //mapping(uint => string) projectDetails
+        uint256 skill_1; //engineering : value 0 - 100 max.
+        uint256 skill_2; //design
+        uint256 skill_3; //registration
+        uint256 skill_4; //communication / management 
+        uint256 skill_5; //academic / educating
+        uint256 skill_6; //community / onboarding-management-growth
+        uint256 skill_7; 
+        uint256 skill_8;
+        uint256 skill_9;
+        uint256 skill_10;
     }
     //mapping to save member structs
     mapping (address => MemberSkills) public memberSkillsStructMap;
@@ -45,23 +53,24 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, 
     //whitelist member
     mapping (address => bool) public whitelistedMember;
 
-    //add whitelist mapping
-
-    constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH") EIP712("ARCH", "1") {
+    constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
     }
 
     //whitelist member address and create memberSkills struct
-    function whitelistMember(address _memberAddress) public {
+    function whitelistMember(address[] memory _memberAddress) public {
         //require owner/access control to submit address (possibly do batch whitelisting)
-        
-        _memberIds.increment();
-        uint256 currentMemberId = _memberIds.current();
 
-        memberSkillsStructMap[_memberAddress] = MemberSkills(currentMemberId, 0, 0, 0, 0, 0, 0);
+        //Batch whitelisting
+        for(uint256 i = 0; i < _memberAddress.length; i++ ) {
+            _memberIds.increment();
+            uint256 currentMemberId = _memberIds.current();
 
-        whitelistedMember[_memberAddress] = true;
+            memberSkillsStructMap[_memberAddress[i]] = MemberSkills(currentMemberId, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+            whitelistedMember[_memberAddress[i]] = true;
+        }
 
     }
 
@@ -75,7 +84,7 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, 
         // require(whitelistedMember[msg.sender], "Not whitelisted");
 
         //require can only mint 1 NFT (NFT's connected to addresses)
-        // require(addressToNFTNumber[msg.sender] == 0, "Already minted NFT");
+        require(addressToNFTNumber[msg.sender] == 0, "Already minted NFT");
 
         _tokenIds.increment();
         uint256 currentTokenId = _tokenIds.current();
@@ -89,24 +98,10 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, 
 
     function getTokenURI(uint256 tokenId) public view returns (string memory){
 
-        address addressOfNFTOwner = ownerOf(tokenId);
-        MemberSkills storage memberSkillsStruct = memberSkillsStructMap[addressOfNFTOwner];
-        // string memory memberProjectsCompleted = memberSkillsStruct.projectsCompleted.toString();
-        string memory memberSkillLevel_1 = memberSkillsStruct.skill_1.toString();
-        string memory memberSkillLevel_2 = memberSkillsStruct.skill_2.toString();
-        string memory memberSkillLevel_3 = memberSkillsStruct.skill_3.toString();
-        string memory memberSkillLevel_4 = memberSkillsStruct.skill_4.toString();
-        string memory memberSkillLevel_5 = memberSkillsStruct.skill_5.toString();
-
-
         bytes memory dataURI = abi.encodePacked(
                 getTokenURIInitialMetadata(tokenId),
-                '"skill_1": "', memberSkillLevel_1, '",', 
-                '"skill_2": "', memberSkillLevel_2, '",', 
-                '"skill_3": "', memberSkillLevel_3, '",', 
-                '"skill_4": "', memberSkillLevel_4, '",', 
-                '"skill_5": "', memberSkillLevel_5, '",', 
-            '}'
+                getSkillsURIMetadata(tokenId),
+                getSkillsURIMetadata2(tokenId)
         );
 
         return string(
@@ -115,7 +110,6 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, 
                 Base64.encode(dataURI)
             )
         );
-    
     }
 
     function getTokenURIInitialMetadata(uint256 tokenId) internal view returns (string memory) {
@@ -137,9 +131,60 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, 
 
         return string(
             dataURI
-        );
-        
+        ); 
     }
+
+    function getSkillsURIMetadata(uint256 tokenId) internal view returns (string memory) {
+        
+        address addressOfNFTOwner = ownerOf(tokenId);
+        MemberSkills storage memberSkillsStruct = memberSkillsStructMap[addressOfNFTOwner];
+
+        string memory memberSkillLevel_1 = memberSkillsStruct.skill_1.toString();
+        string memory memberSkillLevel_2 = memberSkillsStruct.skill_2.toString();
+        string memory memberSkillLevel_3 = memberSkillsStruct.skill_3.toString();
+        string memory memberSkillLevel_4 = memberSkillsStruct.skill_4.toString();
+        string memory memberSkillLevel_5 = memberSkillsStruct.skill_5.toString();
+
+        bytes memory dataURI = abi.encodePacked(
+                '"skill_1": "', memberSkillLevel_1, '",', 
+                '"skill_2": "', memberSkillLevel_2, '",', 
+                '"skill_3": "', memberSkillLevel_3, '",', 
+                '"skill_4": "', memberSkillLevel_4, '",', 
+                '"skill_5": "', memberSkillLevel_5, '",'
+        );
+
+        return string(
+            dataURI
+        );
+    }
+
+    function getSkillsURIMetadata2(uint256 tokenId) internal view returns (string memory) {
+        
+        address addressOfNFTOwner = ownerOf(tokenId);
+        MemberSkills storage memberSkillsStruct = memberSkillsStructMap[addressOfNFTOwner];
+
+        string memory memberSkillLevel_6 = memberSkillsStruct.skill_6.toString();
+        string memory memberSkillLevel_7 = memberSkillsStruct.skill_7.toString();
+        string memory memberSkillLevel_8 = memberSkillsStruct.skill_8.toString();
+        string memory memberSkillLevel_9 = memberSkillsStruct.skill_9.toString();
+        string memory memberSkillLevel_10 = memberSkillsStruct.skill_10.toString();
+
+
+        bytes memory dataURI = abi.encodePacked(
+                '"skill_6": "', memberSkillLevel_6, '",', 
+                '"skill_7": "', memberSkillLevel_7, '",', 
+                '"skill_8": "', memberSkillLevel_8, '",', 
+                '"skill_9": "', memberSkillLevel_9, '",', 
+                '"skill_10": "', memberSkillLevel_10, '",', 
+            '}'
+        );
+
+        return string(
+            dataURI
+        );
+    }
+
+    function getNestedProjectsMetadata(uint tokenId) internal view returns (string memory) {}
 
     function updateIPFSImageFolderURI (string memory newIPFSURI) public {
         imageIPFSFolderURI = newIPFSURI;
@@ -170,7 +215,7 @@ contract OnChainArchiDAONFT is ERC721, AccessControl, ERC721URIStorage, EIP712, 
 
     function _afterTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
         internal
-        override(ERC721, ERC721Votes)
+        override(ERC721)
     {
         super._afterTokenTransfer(from, to, tokenId, batchSize);
     }
