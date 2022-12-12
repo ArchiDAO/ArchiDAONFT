@@ -60,7 +60,7 @@ This current repository version is a temporary development one, until we structu
 
 # ToDo-
 - batch whitelist implemented
-- multisig
+- multisig (check Gnosis Safe API to implement)
 
 
 
