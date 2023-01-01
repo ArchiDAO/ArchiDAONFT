@@ -1,4 +1,4 @@
-/ SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts@4.8.0/token/ERC721/ERC721.sol";
@@ -12,7 +12,7 @@ import "@openzeppelin/contracts@4.8.0/utils/Counters.sol";
 
 
 //@dev we should explore upgradeable contracts
-//@dev burn function is embedded- we can tuse that for certificable credentials upgrade OR a bridge between L1 and L2
+//@dev burn function is embedded- we can use that for certifiable credentials upgrade OR a bridge between L1 and L2
 contract Arch is ERC721, ERC721URIStorage, Pausable, AccessControl, ERC721Burnable, EIP712, ERC721Votes {
     using Counters for Counters.Counter;
 
@@ -21,7 +21,7 @@ contract Arch is ERC721, ERC721URIStorage, Pausable, AccessControl, ERC721Burnab
     Counters.Counter private _tokenIdCounter;
 
     //@user multisig should be the admin
-    //@user three core memebrs as pausers
+    //@user three core members as pausers
     //@user multisig as minter - or core members as minters
 
     constructor() ERC721("Arch", "ARC") EIP712("Arch", "1") {
