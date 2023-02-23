@@ -1,26 +1,31 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.16;
 
-// import "hardhat/console.sol";
 // import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+// import {Base64} from "./Base64.sol";
 //check snapshot for voting
+import "hardhat/console.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
-// import {Base64} from "./Base64.sol";
 
+/// @title ArchiDAO non-transferable skills NFT
+/// @author Hico
+/// @notice This on-chain NFT contract serves as gate access to the ArchiDAO website. Skills can also be increased
+/// @dev All function calls are currently implemented without side effects
+/// @custom:experimental This is an experimental on-chain contract.
 contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
     using Strings for uint256;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     Counters.Counter private _memberIds;
 
-    // PNG image URI on IPFS, can update
-    string public imageIPFSFolderURI = 'https://ipfs.io/ipfs/QmRHgykzBUuQR4FuWUH2mtpabWagLSuxndjD3fK2c7ZJ89/';
+    // ArchiDAO NFT Image folder on IPFS.
+    string public imageIPFSFolderURI = "https://ipfs.io/ipfs/QmRHgykzBUuQR4FuWUH2mtpabWagLSuxndjD3fK2c7ZJ89/";
 
-//need to have NFT to access to ERC20 tokens to be able to stake, be part of the project
+    // Member Skills 
     struct MemberSkills {
         uint256 memberId;
         uint256 skill_1; //engineering : value 0 - 100 max.
@@ -35,7 +40,6 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         uint256 skill_10;
         uint256 projectsCompleted; 
     }
-    //MemberSkills Struct mapping
     mapping (address => MemberSkills) public memberSkillsStructMap;
 
     // struct ProjectDetail {
@@ -50,31 +54,32 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
     // // ProjectDetail struct mapping
     // mapping(address => (mapping(uint) => ProjectDetail)) projectDetails;
 
-    //mapping for addresses to NFTS
+    // Address to NFT index mapping
     mapping (address => uint256) public addressToNFTNumber;
 
-    //whitelist member
+    // Address to bool whitelisted member mapping
     mapping (address => bool) public whitelistedMember;
 
-    // Used to make th eNFT non-transferable
+    // To create non-transferable mechanism (mimic soulbound)
     bool public isTokenTransferable = false;
 
     constructor() ERC721 ("ArchiDAO Skills NFT", "ARCH") {
-
     }
 
-    //whitelist member address to enable minting
+    /// @notice Batch address whitelisting for minting eligibility of members
+    /// @dev 
+    /// @param _memberAddress: Multiple member addresses to be whitelisted
     function whitelistMember(address[] memory _memberAddress) public onlyOwner {
         // require(!whitelistedMember[_memberAddress], "Member already whitelisted");
-        //require: integrate other requirements needed before address whitelisted (referral)
 
-        //Batch whitelisting
         for(uint256 i = 0; i < _memberAddress.length; i++ ) {
             whitelistedMember[_memberAddress[i]] = true;
         }
     }
 
-    // Remove whitelisted member that hasnt minted a token yet
+    /// @notice Remove a whitelisted address
+    /// @dev 
+    /// @param _memberAddress: Address to be removed
     function removeWhitelistedMember(address _memberAddress) public {
         require(whitelistedMember[_memberAddress], "Member not whitelisted");
         require(balanceOf(_memberAddress) < 1, "Member already minted NFT");
@@ -82,23 +87,17 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         whitelistedMember[_memberAddress] = false;
     }
 
-    //Minting NFT function
-    function mint() public /*onlyRole(MINTER_ROLE)*/ {
-        // Address must be whitelisted to be able ot mint
-        // require(whitelistedMember[msg.sender], "Not whitelisted");
-
-        // Each Address can only mint 1 NFT
+    /// @notice Whitelisted addresses can mint ArchiDAONFT
+    /// @dev 
+    /// @custom:Whitelisting not implemented for testing contract.
+    function mint() external {
+        // require(whitelistedMember[msg.sender], "Address not whitelisted");
         require(addressToNFTNumber[msg.sender] == 0, "Already minted NFT");
-
-        //require: Additional requirements before being able to mint (time, cost)
-        //IE must be whitelisted for certain amount of time and complete tasks
 
         _tokenIds.increment();
         uint256 currentTokenId = _tokenIds.current();
 
         memberSkillsStructMap[msg.sender] = MemberSkills(currentTokenId, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-
-        // Initialise ProjectDetail struct with mapping projectDetails
 
         addressToNFTNumber[msg.sender] = currentTokenId;
 
