@@ -88,8 +88,8 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
     }
 
     /// @notice Whitelisted addresses can mint ArchiDAONFT
-    /// @dev 
-    /// @custom:Whitelisting not implemented for testing contract.
+    /// @dev When NFT minted the MemberSkills Struc is initiated with 0 values for all skills
+    /// @custom:whitelist - Whitelisting not implemented for testing contract
     function mint() external {
         // require(whitelistedMember[msg.sender], "Address not whitelisted");
         require(addressToNFTNumber[msg.sender] == 0, "Already minted NFT");
@@ -106,6 +106,9 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         _setTokenURI(currentTokenId, getTokenURI(currentTokenId));
     }
 
+    /// @notice Retrieves the tokenURI of the NFT metadata
+    /// @dev Encodes the dataURI into base64
+    /// @return Base64 encoded metadata of NFT viewable in browser
     function getTokenURI(uint256 tokenId) public view returns (string memory){
 
         bytes memory dataURI = abi.encodePacked(
@@ -122,6 +125,9 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         );
     }
 
+    /// @notice Builds the NFT metadata and encodes it to base64
+    /// @dev Encodes the dataURI into base64.  
+    /// @return Base64 encoded metadata - initial metadata
     function getTokenURIInitialMetadata(uint256 tokenId) internal view returns (string memory) {
         
         string memory memberTokenId = tokenId.toString();
@@ -144,6 +150,9 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         ); 
     }
 
+    /// @notice Builds the NFT metadata and encodes it to base64
+    /// @dev Encodes the dataURI into base64 
+    /// @return Base64 encoded metadata - skills 1 to 5 metadata
     function getSkillsURIMetadata(uint256 tokenId) internal view returns (string memory) {
         
         address addressOfNFTOwner = ownerOf(tokenId);
@@ -168,6 +177,9 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         );
     }
 
+    /// @notice Builds the NFT metadata and encodes it to base64
+    /// @dev Encodes the dataURI into base64 
+    /// @return Base64 encoded metadata - skills 6 to 10 metadata
     function getSkillsURIMetadata2(uint256 tokenId) internal view returns (string memory) {
         
         address addressOfNFTOwner = ownerOf(tokenId);
@@ -193,11 +205,12 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         );
     }
 
+    /// @notice Changes the IPFS folder location URI
+    /// @dev Can add any string of folder location which contains images, preferably IPFS
     function updateIPFSImageFolderURI (string memory newIPFSURI) public {
         imageIPFSFolderURI = newIPFSURI;
     }
 
-    //Update memberSkillsStruc with increased skill level
     function updateMemberSkills(uint tokenId, uint _skill_1, uint _skill_2) public {
         // require token exists
         // onlyOwner (multisig)
