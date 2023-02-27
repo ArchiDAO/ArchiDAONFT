@@ -211,6 +211,8 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         imageIPFSFolderURI = newIPFSURI;
     }
 
+    /// @notice Changes the on-chain user skills struct and the NFT metadata
+    /// @dev While in testing, only 2 skills can currently be changed
     function updateMemberSkills(uint tokenId, uint _skill_1, uint _skill_2) public {
         // require token exists
         // onlyOwner (multisig)
@@ -265,6 +267,8 @@ contract OnChainArchiDAONFT is ERC721, Ownable, ERC721URIStorage {
         return super.supportsInterface(interfaceId);
     }
 
+    /// @notice Before a token is transferred this function will run
+    /// @dev Added require to ensure the token can not be transferred
     function transferFrom(address _from, address _to, uint256 _tokenId) 
         public 
         override(ERC721)
