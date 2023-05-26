@@ -61,10 +61,9 @@ contract ArchiDAO is ERC721, Ownable, ERC721URIStorage {
     /// @notice Whitelisted addresses can mint ArchiDAONFT
     /// @dev When NFT minted the MemberSkills Struc is initiated with 0 values for all skills
     /// @custom:whitelist - Whitelisting not implemented for testing contract
-    function mint() public {
+    function mint() public onlyOwner {
         // require(whitelistedMember[msg.sender], "Address not whitelisted");
-        // require(addressToNFTNumber[msg.sender] == 0, "Already minted NFT");
-        require(_tokenIds.current() <= 10, "Only 10 NFT's for testing ");
+        // require(addressToNFTNumber[msg.sender] == 0, "Already minted NFT");        
 
         _tokenIds.increment();
         uint256 currentTokenId = _tokenIds.current();
