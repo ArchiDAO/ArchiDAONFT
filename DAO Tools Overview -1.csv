@@ -1,0 +1,172 @@
+name,description,classification,payment,link,incentives,identity,work / project management,governance,additional functionality (funds - dispute resolution)
+Tally,Tally is an all-in-one tool that helps DAOs govern better.,DAO Developer Tools,Free,https://www.alchemy.com/dapps/tally,,,,,
+Mint Kudos,Mint Kudos enables anyone to mint non-transferrable NFTs on Polygon to record contributions.,Web3 Achievements,Free,https://www.alchemy.com/dapps/mint-kudos,x,,,,
+Collab.Land,Collab.Land is an NFT token gating bot for Telegram and Discord with over 6.5mm verified wallets.,"Token Gating Tools
+DAO Developer Tools
+DAO Reputation Tools",Free,https://www.alchemy.com/dapps/collab-land,x,x,,,
+Juicebox,Juicebox is an Ethereum-based tool that provides DAO infrastructures.,DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/juicebox,,,,,
+Aragon,Aragon - a pioneering platform that enhances on-chain governance.,DAO Developer Tools,Free,https://www.alchemy.com/dapps/aragon,x,x,x,x,x
+Boardroom,"Boardroom is a DAO manager helping members make faster, smarter, and more informed decisions","DAO Project Managemnet Tools
+DAO Developer Tools",Freemium,https://www.alchemy.com/dapps/boardroom,,,,x,
+Snapshot,Snapshot is a gasless decentralized voting protocol for DAOs.,DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/snapshot,,,,x,
+Upstream Collectives,Upstream Collectives - a simple no-code tool for building DAOs.,DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/upstream-collectives,x,x,,x,x
+DAOstack,DAOstack - a library of governance protocols and interfaces for scalable DAOs.,DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/daostack,x,,x,x,x
+Colony,Colony - a complete no-code toolkit for building DAOs.,DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/colony,x,x,x,x,x
+CREW³,Crew - a one-stop tool for onboarding and incentivization in DAOs.,DAO Developer Tools,Free,https://www.alchemy.com/dapps/crew-3,x,x,,,
+Fabric,Fabric is the easiest way to crowdfund onchain.,DAO Developer Tools,Free,https://www.alchemy.com/dapps/fabric,,,,,x
+Lore,"Lore enables collectives to spin up a shared vault, pool resources and own NFTs together.",DAO Developer Tools,Free,https://www.alchemy.com/dapps/lore-xyz,,,,,x
+Sismo,"Sismo is a modular attestation protocol focused on decentralization, privacy, and usability.",Web3 Achievements,Open-source,https://www.alchemy.com/dapps/sismo,,x,,,x
+Orange Protocol,Orange is a protocol that helps users create trust and build their reputation.,DAO Reputation Tools,Free,https://www.alchemy.com/dapps/orange-protocol,x,x,,,
+Krebit,"With Krebit, users can prove their identity without revealing it.",DAO Reputation Tools,Free,https://www.alchemy.com/dapps/krebit,,x,,,
+SourceCred,SourceCred is a tool that helps communities incentivize contributors for their work.,DAO Reputation Tools,Open-source,,x,,,,
+Coordinape,Coordinape - a DAO-tooling infrastructure for an efficient reward distribution system.,DAO Reputation Tools,Free,https://www.alchemy.com/dapps/coordinape,x,,,,
+Noox,Noox allows for the creation of customizable soulbound NFTs.,Web3 Achievements,Open-source,https://www.alchemy.com/dapps/noox,x,x,,,
+Guild,Guild is an automated community creation and management tool.,DAO Developer Tools,Free,https://www.alchemy.com/dapps/guild,x,,x,,
+Karma,Aggregate and curate DAO contributor activity and get visibility into DAO member contributions.,DAO Reputation Tools,Open-source,https://www.alchemy.com/dapps/karma,x,,x,,
+Metopia,Web3 infrastructure that creates a data-based user reputation system for governance and rewards.,DAO Reputation Tools,Free,https://www.alchemy.com/dapps/metopia,x,x,,,
+SOURC3,"SOURC3 is a Web3-native, decentralized platform for on-chain reputation management.",DAO Reputation Tools,Open-source,https://www.alchemy.com/dapps/sourc3,x,,,,
+PNTHN,Track DAO member reputations and establish credibility in the NFT space.,DAO Reputation Tools,Freemium,https://www.alchemy.com/dapps/pnthn,x,,,,
+Popula,Build and monetize your Web3 reputation through creation and social engagement.,DAO Reputation Tools,Open-source,https://www.alchemy.com/dapps/popula,x,,,,
+Neighbourhoods Network,Provides tools and services for a new framework for creating and organizing online communities.,DAO Developer Tools,Freemium,https://www.alchemy.com/dapps/neighbourhoods-network,,x,x,,
+Underdog Protocol,Underdog enables developers & projects to easily integrate dynamic NFTs into any product or workflow.,"DAO Reputation Tools
+NFT Distribution Tools
+NFT APIs",Free,https://www.alchemy.com/dapps/underdog-protocol,x,,,,
+DeWork,"A web3-native project management tool, bounty platform, and professional network.",DAO Project Managemnet Tools,Free,https://www.alchemy.com/dapps/dework,x,,x,,
+Wonderverse,Wonderverse is a DAO project management tool and Web3 credentialing platform.,DAO Project Managemnet Tools,Free,https://www.alchemy.com/dapps/wonderverse,x,x,x,,
+CharmVerse,"CharmVerse is a Web3 operations platform handling docs, tasks, bounties, proposals, and votes.",DAO Project Managemnet Tools,Freemium,https://www.alchemy.com/dapps/charmverse,x,x,x,x,
+0xStation,Submit paid bounties to DAOs and seamlessly manage talent and project pipelines.,DAO Project Managemnet Tools,Free,https://www.alchemy.com/dapps/0xstation,,,x,x,
+Kleoverse,Kleoverse - a DAO project management and resume-building tool.,DAO Project Managemnet Tools,Free,https://www.alchemy.com/dapps/kleoverse,x,,x,,
+DAOhaus,"DAOhaus allows communities to create a DAO and manage, grow, and distribute a shared treasury.",DAO Developer Tools,Free,https://www.alchemy.com/dapps/dao-haus,x,,,x,x
+Commonwealth,"Commonwealth is a platform for on-chain communities to discuss, vote, and fund projects together. ",DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/commonwealth,,,,x,x
+FLOAT,Create events for your web3 communities and prove that they were actually there.,Web3 Achievements,Free,https://www.alchemy.com/dapps/floats,,x,x,,
+Spect,Spect is a web3-enabled no-code tool that helps DAO contributors form circles (or sub-DAOs). ,"DAO Project Managemnet Tools
+DAO Reputation Tools
+DAO Developer Tools",Freemium,https://www.alchemy.com/dapps/spect,,x,,x,
+Jelly,Jelly is a protocol for token rewards. ,"DAO Developer Tools
+DeFi Yield Farming Platforms
+EVM Tools","Free
+Open-source",https://www.alchemy.com/dapps/jelly,x,,,,
+mesha,mesha provides an all-in-one platform for DAOs and web3 companies to manage financial operations.,"Web3 Payment Tools
+Web3 Credit Cards",Freemium,https://www.alchemy.com/dapps/mesha,,,x,x,x
+Reveel,A revenue share protocol offering better pay-out functionalities for businesses & creators.,"Web3 Payment Tools
+Music NFT Tools
+Web3 SDKs
+DAO Developer Tools","Freemium
+Open-source",https://www.alchemy.com/dapps/r3vl,x,,,,x
+Rain,Rain is a corporate credit card.,Web3 Credit Cards,Free,https://www.alchemy.com/dapps/rain,,,,,x
+Spheron,"Connect, Configure & Decentralise your dApp on Web3 Infrastructure","DAO Developer Tools
+Decentralized Storage Tools",Freemium,https://www.alchemy.com/dapps/SpheronHQ,,,x,x,
+Portrait,"A protocol that allows users to create and control decentralized, no-code websites for Web3.","DAO Developer Tools
+Web3 Creator Tools
+Web3 Social Media Dapps
+Decentralized Identity Tools","Freemium
+Free",https://www.alchemy.com/dapps/portrait-gg,,,x,x,
+Opencord,"Opencord is a Web3 native social platform built for DAOs.
+","DAO Project Management Tools
+DAO Reputation Tools
+DAO Developer Tools","Free
+Open-source",https://www.alchemy.com/dapps/opencord,x,x,,,
+XDAO,XDAO is the fastest framework to create and manage decentralized autonomous organizations.,"DAO Developer Tools
+DAO Project Management Tools",Open-source,https://www.alchemy.com/dapps/xdaoapp,x,x,x,x,x
+Alty,Making chat more functional and crypto more social.,"DAO Project Management Tools
+Token Management Tools",Freemium Transaction Fees,https://www.alchemy.com/dapps/alty,,x,,,x
+StationX.network,StationX.network enables you to create & start managing a DAO in under 60 seconds.,"DAO Developer Tools
+DAO Project Management Tools",Free,https://www.alchemy.com/dapps/stationx-network,x,x,x,x,x
+KaratDAO,"KaratDAO is a crypto native growth engine to collect wallets, create analytics, and launch campaigns.","DAO Project Management Tools
+Analytics Tools
+DAO Developer Tools","Free
+Open-source",https://www.alchemy.com/dapps/karatdao,,x,x,x,
+AwesomeQA,AwesomeQA is an AI-driven community management solution for Web3.,"DAO Project Management Tools
+Analytics Tools",Freemium,https://www.alchemy.com/dapps/awesome-qa,,x,x,,
+Intract Gate3,Intract offers a complete suite of growth analytics and community management tools.,"DAO Project Management Tools
+Token Gating Tools
+Analytics Tools
+Web3 Creator Tools","Freemium
+Paid",https://www.alchemy.com/dapps/intract-gate,,,x,,
+Emerald City DAO,"Emerald City DAO is building the next generation of dapps, tools, and public service goods on Flow.","DAO Developer Tools
+NFT Smart Contract Templates
+NFT Minting Tools
+DAO Project Management Tools",Freemium,https://www.alchemy.com/dapps/emerald-city-dao,,,x,,
+THX Network,Thx Network helps you to boost engagement and create new revenue streams.,"DAO Project Management Tools
+DAO Developer Tools
+Analytics Tools
+Token Gating Tools",Freemium,https://www.alchemy.com/dapps/thx-network,x,,x,,
+DAObox,"Legal services for DAOs, including ""legal wrappers"" to establish them as recognized legal entities. ","DAO Project Management Tools
+DAO Developer Tools",Paid,https://www.alchemy.com/dapps/daobox,,,x,x,
+Meeds,Meeds is building a decentralized engagement platform for the future of work.,"DAO Reputation Tools
+DAO Project Management Tools","Open-source
+Free Transaction Fees 
+Paid",https://www.alchemy.com/dapps/meeds,,,x,,
+RYO,RYO is a modular game engine architecture built on the Starknet L2-roll-up.,DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/ryo,,,x,,
+Sesame Labs,"Sesame Labs provides a community engagement platform, advertising network, CRM tool, etc.","DAO Project Management Tools
+Quest-to-Earn Tools
+DAO Reputation Tools
+DAO Developer Tools
+Web3 Data Tools","Freemium
+Paid",https://www.alchemy.com/dapps/sesame-labs,,,x,,
+Questflow,Questflow is an AI-native workflow automation platform to get work done on-chain and off-chain.,DAO Project Management Tools,Freemium,https://www.alchemy.com/dapps/questflow,,,x,,
+Remox,Remox is a simplified and collaborative treasury management tool designed for DAOs.,"DAO Project Management Tools
+Web3 Payment Tools",Free,https://www.alchemy.com/dapps/remox,,,,x,x
+Console,A Web3 messaging app for online communities that lets users own their identity and privacy.,Web3 Messaging Tools,Free,https://www.alchemy.com/dapps/console-xyz,,x,,,
+DEXDAO,DEXDAO is a decentralized exchange (DEX) that revolutionizes asset trading on the blockchain.,Creator DAOs,Freemium,https://www.alchemy.com/dapps/dexdao,,,,,x
+Q Blockchain,"Q is the governance backbone for the web3 world, allowing you to build intergalactic organizations.",DAO Developer Tools,Open-source,https://www.alchemy.com/dapps/q-blockchain,,,,x,
+GOSH,GOSH is a decentralized git and Ethereum L2 that allows you to run smart contracts for free,DAO Developer Tools,"Open-source
+Free
+Freemium",https://www.alchemy.com/dapps/gosh,,,x,,x (automatic code execution - SC)
+oSnap,oSnap is a decentralized governance tool that helps DAOs streamline their governance processes.,"DAO Developer Tools
+DAO Project Management Tools",Free,https://www.alchemy.com/dapps/uma-osnap,,,,x,
+Loreum,"Make DAO governance efficient, scalable and transparent.","DAO Developer Tools
+DAO Reputation Tools
+EVM Tools
+Token Management Tools",Open-source,https://www.alchemy.com/dapps/loreum,,,,x,
+DeepDAO,Discovery and analytics engine for the DAO ecosystem.,"Analytics Tools
+DAO Developer Tools",Freemium,https://www.alchemy.com/dapps/deepdao,,,,,x
+DeXe DAO Studio,DeXe DAO Studio is a cutting-edge platform designed for the creation and management of DAOs.,"DAO Developer Tools
+DAO Project Management Tools",Open-source Transaction Fees Free,https://www.alchemy.com/dapps/dexe-dao-studio,,,x,x,x
+DAOBase,DAOBase is a comprehensive DAO aggregator and Treasury Tracking Platform.,DAO Reputation Tools,Free,https://www.alchemy.com/dapps/daobase-ai,,,,,x
+Kaza,Kaza is a Web3 Service Marketplace for freelancers.,DAO Project Management Tools,Transaction Fees,https://www.alchemy.com/dapps/kaza,x,,x,,
+ĀutID,ĀutID is a self-sovereign NFT ID that ties its holders with their decentralized communities.,"Decentralized Identity Tools
+DAO Reputation Tools","Free 
+Open-source",https://www.alchemy.com/dapps/aut-labs,,x,,,
+SimpleSwap,SimpleSwap is a non-custodial anonymous crypto exchange with more than 1000 cryptocurrencies onboard.,"DAO Developer Tools
+Crypto Exchanges
+Crypto Trading Tools",Free,https://www.alchemy.com/dapps/simpleswap,,,,,x
+Smithii Tools,"Create Token & NFT, Make Airdrops and much more. Effortless and without coding.","Token Management Tools
+DAO Project Management Tools","Paid 
+Transaction Fees 
+Free",https://www.alchemy.com/dapps/smithii-tools,,x,,,x
+Headquarters (HQ.xyz),"Headquarters (HQ.xyz) is the on-chain business account, unifying token payments, fiat ramps, and treasury reporting.","Web3 Payment Tools
+Token Management Tools
+Web3 Credit Cards
+Crypto Tax Tools
+DAO Project Management Tools",Paid,https://www.alchemy.com/dapps/hq-xyz,,,x,,x
+OtoCo,"Transforming Web3 Legality - Form, fund, and govern legal entities onchain.",DAO Developer Tools,Paid,https://www.alchemy.com/dapps/otoco,,,,x,
+Curia Governance Dashboard,Curia Lab is a team of experts committed to enhancing the DAO ecosystem.,"DAO Developer Tools
+Analytics Tools",Free,https://www.alchemy.com/dapps/curia-governance-dashboard,,,,x,
+oSnap,oSnap executes the results of DAO Snapshot votes via a Safe with validation by UMA.,"DAO Developer Tools
+DAO Project Management Tools",Free,https://www.alchemy.com/dapps/osnap,,,,x,
+RubyScore,On-chain ranking protocol.,"Web3 Achievements
+Quest-to-Earn Tools
+Static Analysis Tools",Transaction Fees,https://www.alchemy.com/dapps/rubyscore,,,x,x,
+Define Protocol,Define Protocol is a privacy-preserving proof of talenthood protocol.,"Web3 Authentication Tools
+Web3 Credential Tools
+Decentralized Identity Tools
+DAO Reputation Tools",Free,https://www.alchemy.com/dapps/define-protocol,,,,,
+TokenHunters,The all-in-one Web3 hunting platform.,"Web3 Social Media Dapps
+Web3 Achievements",Free,https://www.alchemy.com/dapps/tokenhunters,x,,x,,
+Ink Finance,Ink Finance offers a flexible framework for financial governance and management on-chain.,DAO Project Management Tools,"Free 
+Paid 
+Transaction Fees",https://www.alchemy.com/dapps/ink-finance,x,,,x,
+Governance by Grape,The Solana gateway to DAOs and Web3.,DAO Project Management Tools,Free,https://www.alchemy.com/dapps/governance-by-grape,,,,x,x
+Galaxia Chronicles,Galaxia Chronicles is a next-gen Web3 Game.,"Web3 Games
+Web3 Achievements","Free 
+Paid ",https://www.alchemy.com/dapps/galaxia-chronicles,,,x,,x
+TogetherCrew,TogetherCrew enhances your members' experience with personalized support and rewards.,DAO Project Management Tools,"Open-source
+Freemium",https://www.alchemy.com/dapps/togethercrew,x,,,,
+Feed Protocol,Feed is a security service provider to both mass-market and blockchain-market businesses.,"DAO Developer Tools
+Decentralized Gaming Tools
+Blockchain Security Tools","Paid 
+Transaction Fees",https://www.alchemy.com/dapps/feed-protocol,,,,,x
+Ethereum Follow Protocol (EFP),"Onchain social graph for Ethereum accounts, complementing ENS, SIWE, and the Ethereum identity stack.","Web3 Social Media Dapps
+DAO Reputation Tools","Free 
+Open-source",https://www.alchemy.com/dapps/ethereum-follow-protocol,,x,,,
